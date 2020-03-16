@@ -1,9 +1,12 @@
-body (prefers-color-scheme: light) {
+
+body {
+   background-color: black;
+   color:white;
+}
+
+@media (prefers-color-scheme: light){
+body  {
    background-color: white;
    color:black;
 }
-
-body (prefers-color-scheme: dark) {
-   background-color: black;
-   color:white;
 }
