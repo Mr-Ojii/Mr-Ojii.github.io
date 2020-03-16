@@ -1,3 +1,18 @@
+div#header {
+    background-color: #0099ff;
+    color:black;
+}
+div#main {
+    width: 55%;
+    margin: 0 auto 0 auto;
+}
+p.date {
+    font-size:larger;
+}
+
+div.box {
+    background-color:gray;
+}
 
 body {
    background-color: black;
