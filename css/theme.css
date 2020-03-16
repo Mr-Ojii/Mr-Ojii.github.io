@@ -1,6 +1,8 @@
+
+
 div#header {
     background-color: #0099ff;
-    color:black;
+    color: black;
 }
 div#main {
     width: 55%;
@@ -15,13 +17,17 @@ div.box {
 }
 
 body {
+   font-family:'Noto Sans JP';
    background-color: black;
    color:white;
 }
 
 @media (prefers-color-scheme: light){
-body  {
-   background-color: white;
-   color:black;
-}
+    body {
+        background-color: lightgray;
+        color: black;
+    }
+    div.box {
+        background-color: white;
+    }
 }
