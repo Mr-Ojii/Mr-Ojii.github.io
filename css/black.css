@@ -1,4 +1,9 @@
-﻿body {
-   background-color:#aaaaaa;
-   color:#ffffff
+body (prefers-color-scheme: light) {
+   background-color: white;
+   color:black;
+}
+
+body (prefers-color-scheme: dark) {
+   background-color: black;
+   color:white;
 }
