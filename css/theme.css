@@ -218,7 +218,7 @@ body {
 }
 
 
-@media(max-width:950px) and (min-width:600px) {
+@media(max-width:999px) and (min-width:600px) {
 
     h1 {
         font-size: 200%;
@@ -226,15 +226,8 @@ body {
 
 }
 
-@media(max-width:599px){
 
-    h1 {
-        font-size: 150%;
-    }
-
-}
-
-@media(max-width:950px){
+@media(max-width:1000px){
     div#box {
         width: 100%;
         margin: 0 auto 0 auto;
