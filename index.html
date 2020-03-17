@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="icons/favicon64.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="icons\apple-touch-icon.png">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <title>Gitちょっとわかってきた。</title>
 </head>
 <body>
@@ -19,13 +20,24 @@
         <h1>Mr.おじいの日記のようなもの。</h1>
         <hr />
     </div>
-    <div id="main">
-        <div class="box">
+    <div id="maincontent">
+        <div id="sidebarl">
+            <input type="checkbox" id="toggle_2020" style="display: none;">
+            <label for="toggle_2020"><div id="side_2020">▼2020年(2)</div></label>
+            <div id="s_2020">
+                <a href="#20200316">2020/03/16</a><br/>
+                <a href="#20200317">2020/03/17</a>
+            </div>
+        </div>
+        <div id="sidebarr" style="display:none;">
+            <!--要素だけ残してdisplay:none;-->
+        </div>
+        <div id="box">
             <div class="content">
                 <p class="crosshead">
-                    <a name="2020/03/17" class="date">2020/03/17</a>
+                    <a name="20200317" class="date">2020/03/17</a>
                 </p>
-                404.htmlの追加しました。<br />
+                404.html・サイドバーの追加しました。<br />
                 あと、CSSを書き換えて、ダークテーマに対応しました。<br />
                 どちらかというと、ダークテーマメインで、<br />
                 ブラウザのテーマがライトテーマだと、<br />
@@ -36,7 +48,7 @@
             <br>
             <div class="content">
                 <p class="crosshead">
-                    <a name="2020/03/16" class="date">2020/03/16</a>
+                    <a name="20200316" class="date">2020/03/16</a>
                 </p>
                 このページを初めて開きました。<br>
                 HTML・Git勉強中です。

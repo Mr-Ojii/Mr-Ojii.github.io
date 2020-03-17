@@ -5,6 +5,29 @@ div#header {
     text-align:center;
 }
 
+div#sidebarl {
+    background-color: #0099ff;
+    color: black;
+    border: solid white 2px;
+    width: 20%;
+    text-align: center;
+    position: static;
+    top: 0px;
+    float: left;
+    padding: 0;
+}
+
+div#sidebarr {
+    color: black;
+    font-family: 'Noto Sans JP';
+    width: 20%;
+    text-align: center;
+    position: static;
+    top: 0px;
+    float: right;
+    padding: 0;
+}
+
 a:link {
     color: white;
 }
@@ -21,12 +44,6 @@ a:active {
     color: white;
 }
 
-
-div#main {
-    width: 55%;
-    margin: 0 auto 0 auto;
-}
-
 p.crosshead {
     font-size: larger;
     font-family: 'Noto Sans JP';
@@ -40,9 +57,11 @@ p {
 }
 
 
-div.box {
-    background-color: black;
-    border:outset;
+div#box {
+    background-color: #555555;
+    border: outset;
+    width: 50%;
+    margin: 0 auto 0 auto;
 }
 
 div.content {
@@ -97,10 +116,6 @@ body {
 }
 
 @media(max-width:950px) and (min-width:600px) {
-    div#main {
-        width: 100%;
-        margin: 0 auto 0 auto;
-    }
 
     h1 {
         font-size: 200%;
@@ -109,13 +124,42 @@ body {
 }
 
 @media(max-width:599px){
-    div#main {
-        width: 100%;
-        margin: 0 auto 0 auto;
-    }
 
     h1 {
         font-size: 150%;
     }
 
+}
+
+@media(max-width:950px){
+    div#box {
+        width: 100%;
+        margin: 0 auto 0 auto;
+    }
+    div#sidebarl {
+    display:none;
+    }
+    div#sidebarr {
+        display: none;
+    }
+}
+
+/*--SIDEBAR ANIMATION--*/
+
+div#side_2020 {
+    background-color: aqua;
+    cursor: pointer;
+}
+
+div#s_2020 {
+    background-color: #0099ff;
+    display:none;
+}
+
+div#toggle_ {
+    cursor:pointer;
+}
+
+#toggle_2020:checked ~ div#s_2020 {
+    display:block;
 }
