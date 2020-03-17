@@ -1,20 +1,42 @@
-
-
 div#header {
     background-color: #0099ff;
     color: black;
+    font-family:'Noto Sans JP';
 }
+
 div#main {
     width: 55%;
     margin: 0 auto 0 auto;
 }
-p.date {
-    font-size:larger;
+
+p.crosshead {
+    font-size: larger;
+    font-family: 'Noto Sans JP';
+    border: inset black 5px;
+    border-left-color: aqua;
+    background-color: dimgray;
 }
 
-div.box {
-    background-color:gray;
+p {
+    margin: 0px 0px;
 }
+
+
+div.box {
+    background-color: black;
+    border:outset;
+}
+
+div.content {
+    background-color: gray;
+    border:solid;
+    font-family: 'Meiryo UI','ÉÅÉCÉäÉI',Meiryo;
+}
+
+h1 {
+    font-size:300%;
+}
+
 
 body {
    font-family:'Noto Sans JP';
@@ -24,10 +46,41 @@ body {
 
 @media (prefers-color-scheme: light){
     body {
-        background-color: lightgray;
+        background-color: #f9f9f9;
         color: black;
     }
     div.box {
-        background-color: white;
+        background-color: #eeeeee;
     }
+    div.content {
+        background-color: lightgray;
+    }
+    p.crosshead {
+        background-color: white;
+        border: outset white 5px;
+        border-left-color: aqua;
+    }
+}
+
+@media(max-width:950px) and (min-width:600px) {
+    div#main {
+        width: 100%;
+        margin: 0 auto 0 auto;
+    }
+
+    h1 {
+        font-size: 200%;
+    }
+}
+
+@media(max-width:599px){
+    div#main {
+        width: 100%;
+        margin: 0 auto 0 auto;
+    }
+
+    h1 {
+        font-size: 150%;
+    }
+
 }
