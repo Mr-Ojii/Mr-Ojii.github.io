@@ -17,6 +17,23 @@ div#sidebarl {
     padding: 0;
 }
 
+div#sidebars {
+    background-color: #0099ff;
+    color: black;
+    border: solid white 2px;
+    width: 370px;
+    text-align: center;
+    position:center;
+    top: 0px;
+    float: left;
+    padding: 0;
+}
+
+div#sidebarsu {
+    position:page;
+    top:20px;
+}
+
 div#sidebarr {
     color: black;
     font-family: 'Noto Sans JP';
@@ -60,7 +77,7 @@ p {
 div#box {
     background-color: #555555;
     border: outset;
-    width: 50%;
+    width: 55%;
     margin: 0 auto 0 auto;
 }
 
@@ -68,6 +85,17 @@ div.content {
     background-color: gray;
     border:solid;
     font-family: 'Meiryo UI','ÉÅÉCÉäÉI',Meiryo;
+}
+
+div#smartphone_menu {
+    padding-left: 5em;
+    position: fixed;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+    min-height: 1000px;
+    min-width: 500px;
+    right: -700px;
+    transition: all .5s;
 }
 
 h1 {
@@ -115,6 +143,81 @@ body {
 
 }
 
+/*--HAMBURGER----------------------*/
+.menu-trigger, .menu-trigger span {
+    display: inline-block;
+    transition: left 4s;
+    box-sizing: border-box;
+}
+
+.menu-trigger {
+    position: fixed;
+    top: 30px;
+    width: 40px;
+    height: 34px;
+    right: 20px;
+    transition:right .45s .05s;
+}
+
+
+    .menu-trigger span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 4px;
+    }
+    
+        .menu-trigger span:nth-of-type(1) {
+            top: 0px;
+            transform: rotate(0deg);
+            transition: top .5s cubic-bezier(.8, 0, .2, 1), transform .5s cubic-bezier(.8, 0, .2, 1);
+        }
+
+        .menu-trigger span:nth-of-type(2) {
+            top: 15px;
+            width: 100%;
+            left: 0%;
+            transition: width .5s cubic-bezier(.8, 0, .2, 1), left .5s cubic-bezier(.8, 0, .2, 1);
+        }
+
+        .menu-trigger span:nth-of-type(3) {
+            top: 30px;
+            transform: rotate(0deg);
+            transition: top .5s cubic-bezier(.8, 0, .2, 1), transform .5s cubic-bezier(.8, 0, .2, 1);
+        }
+        
+/*--HAMBURGER ANIMATION------------*/
+#toggle_ham:checked ~ .menu-trigger span:nth-of-type(1) {
+    top: 15px;
+    transform: rotate(45deg);
+}
+
+#toggle_ham:checked ~ .menu-trigger span:nth-of-type(2) {
+    width: 0%;
+    left: 50%;
+}
+
+#toggle_ham:checked ~ .menu-trigger span:nth-of-type(3) {
+    top: 15px;
+    transform: rotate(-45deg);
+}
+
+#toggle_ham:checked ~ .menu-trigger{
+    right: 400px;
+}
+
+#toggle_ham:checked ~ div#smartphone_menu{
+    right: -125px;
+}
+/*---------------------*/
+
+.menu-trigger {
+    display: none;
+}
+
+
 @media(max-width:950px) and (min-width:600px) {
 
     h1 {
@@ -137,15 +240,17 @@ body {
         margin: 0 auto 0 auto;
     }
     div#sidebarl {
-    display:none;
+        display:none;
     }
     div#sidebarr {
         display: none;
     }
+    .menu-trigger {
+        display: block;
+    }
 }
 
 /*--SIDEBAR ANIMATION--*/
-
 div#side_2020 {
     background-color: aqua;
     cursor: pointer;
@@ -156,10 +261,30 @@ div#s_2020 {
     display:none;
 }
 
-div#toggle_ {
+div#toggle_2020 {
     cursor:pointer;
 }
 
 #toggle_2020:checked ~ div#s_2020 {
     display:block;
+}
+
+div#side_2020-s {
+    color:black;
+    background-color: aqua;
+    cursor: pointer;
+}
+
+div#s_2020-s {
+    color: black;
+    background-color: #0099ff;
+    display: none;
+}
+
+div#toggle_2020-s {
+    cursor: pointer;
+}
+
+#toggle_2020-s:checked ~ div#s_2020-s {
+    display: block;
 }
