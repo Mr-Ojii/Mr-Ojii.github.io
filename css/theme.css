@@ -12,7 +12,7 @@ div#main {
 p.crosshead {
     font-size: larger;
     font-family: 'Noto Sans JP';
-    border: inset black 5px;
+    border: inset #aaaaaa 5px;
     border-left-color: aqua;
     background-color: dimgray;
 }
