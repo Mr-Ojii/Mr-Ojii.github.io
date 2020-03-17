@@ -4,6 +4,23 @@ div#header {
     font-family:'Noto Sans JP';
 }
 
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
+
 div#main {
     width: 55%;
     margin: 0 auto 0 auto;
@@ -60,6 +77,22 @@ body {
         border: outset white 5px;
         border-left-color: aqua;
     }
+    a:link {
+        color: black;
+    }
+
+    a:visited {
+        color: black;
+    }
+
+    a:hover {
+        color: black;
+    }
+
+    a:active {
+        color: black;
+    }
+
 }
 
 @media(max-width:950px) and (min-width:600px) {
