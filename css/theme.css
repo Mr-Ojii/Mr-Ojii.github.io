@@ -1,3 +1,19 @@
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
 div#header {
     background-color: #0099ff;
     color: black;
@@ -20,7 +36,7 @@ div#sidebarl {
 div#sidebars {
     background-color: #0099ff;
     color: black;
-    border: solid white 2px;
+    border: solid black 2px;
     width: 370px;
     text-align: center;
     position: center;
@@ -46,22 +62,9 @@ div#sidebarr {
     float: right;
     padding: 0;
 }
-
-a:link {
-    color: white;
-}
-
-a:visited {
-    color: white;
-}
-
-a:hover {
-    color: white;
-}
-
-a:active {
-    color: white;
-}
+    div#sidebarr a {
+        color:black;
+    }
 
 p.crosshead {
     font-size: larger;
@@ -91,6 +94,7 @@ div.content {
 
 div#smartphone_menu {
     padding-left: 5em;
+    top:0;
     position: fixed;
     color: white;
     background-color: rgba(0,0,0,0.7);
@@ -147,21 +151,6 @@ body {
     }
     div#sidebarr {
         border-color: black;
-    }
-        a:link {
-        color: black;
-    }
-
-    a:visited {
-        color: black;
-    }
-
-    a:hover {
-        color: black;
-    }
-
-    a:active {
-        color: black;
     }
 
 }
@@ -260,9 +249,6 @@ body {
     }
     div.content {
         font-size: 200%;
-    }
-    h1 {
-        font-size:300%;
     }
 }
 
