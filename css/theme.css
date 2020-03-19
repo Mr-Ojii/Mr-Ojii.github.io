@@ -23,7 +23,7 @@ div#sidebars {
     border: solid white 2px;
     width: 370px;
     text-align: center;
-    position:center;
+    position: center;
     top: 0px;
     float: left;
     padding: 0;
@@ -35,6 +35,8 @@ div#sidebarsu {
 }
 
 div#sidebarr {
+    background-color: aqua;
+    border: solid white 2px;
     color: black;
     font-family: 'Noto Sans JP';
     width: 20%;
@@ -110,12 +112,27 @@ body {
 }
 
 @media (prefers-color-scheme: light){
+    a:link {
+        color: black;
+    }
+
+    a:visited {
+        color: black;
+    }
+
+    a:hover {
+        color: black;
+    }
+
+    a:active {
+        color: black;
+    }
     body {
         background-color: #f9f9f9;
         color: black;
     }
-    div.box {
-        background-color: #eeeeee;
+    div#box {
+        background-color: #eee;
     }
     div.content {
         background-color: lightgray;
@@ -125,7 +142,13 @@ body {
         border: outset white 5px;
         border-left-color: aqua;
     }
-    a:link {
+    div#sidebarl {
+        border-color:black;
+    }
+    div#sidebarr {
+        border-color: black;
+    }
+        a:link {
         color: black;
     }
 
@@ -218,15 +241,6 @@ body {
 }
 
 
-@media(max-width:999px) and (min-width:600px) {
-
-    h1 {
-        font-size: 200%;
-    }
-
-}
-
-
 @media(max-width:1000px){
     div#box {
         width: 100%;
@@ -240,6 +254,15 @@ body {
     }
     .menu-trigger {
         display: block;
+    }
+    div#sidebars {
+        font-size: 200%;
+    }
+    div.content {
+        font-size: 200%;
+    }
+    h1 {
+        font-size:300%;
     }
 }
 
