@@ -74,6 +74,13 @@ p.crosshead {
     background-color: dimgray;
 }
 
+div.subtitle {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 p {
     margin: 0px 0px;
 }
@@ -89,6 +96,7 @@ div#box {
 div.content {
     background-color: gray;
     border:solid;
+    font-size:20px;
     font-family: 'Meiryo UI','ƒƒCƒŠƒI',Meiryo;
 }
 
