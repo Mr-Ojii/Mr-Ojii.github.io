@@ -3,7 +3,7 @@
 <head>
     <!-- ソースのコピーはやめてほしいネ！
         (っていうコメントを入れられるかどうかのテストなので気にせずコピっテネ)-->
-    <meta http-equiv="content-type" content="text/html"  charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
     <meta name="description" content="Mr.おじいの日記のようなもの。" />
     <meta name="keywords" content="Mr.おじい,Mr_Ojii,Mr-Ojii" />
     <meta name="author" content="Mr.おじい" />
@@ -16,6 +16,7 @@
     <link rel="apple-touch-icon" href="icons\apple-touch-icon.png">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/count.js"></script>
     <title>Gitちょっとわかってきた。</title>
 </head>
 <body>
@@ -32,13 +33,14 @@
                     </ul>
                 </div>
                 <input type="checkbox" id="toggle_2020-s" style="display: none;">
-                <label for="toggle_2020-s"><div id="side_2020-s" class="subtitle">▼2020年(5)</div></label>
+                <label for="toggle_2020-s"><div id="side_2020-s" class="subtitle">▼2020年(javaScriptを有効にしてください。)</div></label>
                 <div id="s_2020-s">
                     <a href="#20200316">2020/03/16</a><br />
                     <a href="#20200317">2020/03/17</a><br />
                     <a href="#20200319">2020/03/19</a><br />
                     <a href="#20200323">2020/03/23</a><br />
-                    <a href="#20200405">2020/04/05</a>
+                    <a href="#20200405">2020/04/05</a><br />
+                    <a href="#20200405">2020/04/08</a>
                 </div>
             </div>
             <div id="sidebarsu">
@@ -63,24 +65,40 @@
     <div id="maincontent">
         <div id="sidebarl">
             <input type="checkbox" id="toggle_2020" style="display: none;">
-            <label for="toggle_2020"><div id="side_2020" class="subtitle">▼2020年(5)</div></label>
+            <label for="toggle_2020"><div id="side_2020" class="subtitle">▼2020年(JavaScriptを有効にしてください。)</div></label>
             <div id="s_2020">
                 <a href="#20200316">2020/03/16</a><br />
                 <a href="#20200317">2020/03/17</a><br />
                 <a href="#20200319">2020/03/19</a><br />
                 <a href="#20200323">2020/03/23</a><br />
-                <a href="#20200405">2020/04/05</a>
+                <a href="#20200405">2020/04/05</a><br />
+                <a href="#20200405">2020/04/08</a>
             </div>
         </div>
         <div id="sidebarr" class=" subtitle">
-            Link<br/>
-                <ul style="text-align:left;">
-                    <li><a href="https://twitter.com/Mr_Ojii">Twitter</a><br /></li>
-                    <li><a href="https://www.youtube.com/channel/UCqc5Pe6yr7YOg_Fb019Q61Q">YouTube Channel</a></li>
-                    <li><a href="https://github.com/Mr-Ojii">GitHub</a></li>
-                </ul>
+            Link<br />
+            <ul style="text-align:left;">
+                <li><a href="https://twitter.com/Mr_Ojii">Twitter</a><br /></li>
+                <li><a href="https://www.youtube.com/channel/UCqc5Pe6yr7YOg_Fb019Q61Q">YouTube Channel</a></li>
+                <li><a href="https://github.com/Mr-Ojii">GitHub</a></li>
+            </ul>
         </div>
         <div id="box">
+            <div class="content">
+                <p class="crosshead">
+                    <a name="20200408" class="date">2020/04/08</a>
+                </p>
+                <p>
+                    はい。JS導入しました。<br />
+                    といっても、ほとんど使ってないに等しいですが...<br />
+                    サイドバーの要素の数を拾ってもらってるだけですね。<br />
+                    更新しなくていい要素が増えたことで、僕もチョイっとだけ楽になりました。<br />
+                    jQueryありがたいです。<br />
+                    あと、CSSでエラーが出てたみたいなので、そこを削除しました。<br />
+                    アニメ放送延期ばかりで、ちょっと寂しいが、しょうがないね。
+                </p>
+            </div>
+            <br />
             <div class="content">
                 <p class="crosshead">
                     <a name="20200405" class="date">2020/04/05</a>
@@ -91,9 +109,9 @@
                     まぁ、大した更新はしてないんですが...<br />
                     サイドバーの開くとこの範囲選択をできなくしただけです。<br />
                     TJAPlayer3-fのほうはDiscord-RPC変えたくらいだっけ？<br /><br />
-                    このページJS使わないようにしてたけど。<br/>
-                    多分大体の人がJSブロックしてないよね。<br/>
-                    ってことで、いつかJSで動き作ろっかな。<br/>
+                    このページJS使わないようにしてたけど。<br />
+                    多分大体の人がJSブロックしてないよね。<br />
+                    ってことで、いつかJSで動き作ろっかな。<br />
                     結構疲れているので失礼しま～す。
                 </p>
             </div>

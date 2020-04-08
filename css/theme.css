@@ -39,14 +39,12 @@ div#sidebars {
     border: solid black 2px;
     width: 370px;
     text-align: center;
-    position: center;
     top: 0px;
     float: left;
     padding: 0;
 }
 
 div#sidebarsu {
-    position:page;
     top:20px;
 }
 
