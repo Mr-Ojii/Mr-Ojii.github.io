@@ -107,7 +107,7 @@ div#smartphone_menu {
     min-height: 10000px;
     min-width: 500px;
     right: -700px;
-    transition: all .5s;
+    transition: all .4s;
 }
 
 h1 {
@@ -161,7 +161,7 @@ body {
 
 }
 
-/*--HAMBURGER----------------------*/
+/*--SIDEBAR--*/
 .menu-trigger, .menu-trigger span {
     display: inline-block;
     transition: left 4s;
@@ -174,62 +174,62 @@ body {
     width: 40px;
     height: 34px;
     right: 20px;
-    transition:right .45s .05s;
+    transition:right .35s .05s;
 }
 
 
-    .menu-trigger span {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background-color: #fff;
-        border-radius: 4px;
-    }
+.menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+}
     
-        .menu-trigger span:nth-of-type(1) {
-            top: 0px;
-            transform: rotate(0deg);
-            transition: top .5s cubic-bezier(.8, 0, .2, 1), transform .5s cubic-bezier(.8, 0, .2, 1);
-        }
+.menu-trigger span:nth-of-type(1) {
+    top: 0px;
+    transform: rotate(0deg);
+    transition: top .4s, transform .4s ;
+}
 
-        .menu-trigger span:nth-of-type(2) {
-            top: 15px;
-            width: 100%;
-            left: 0%;
-            transition: width .5s cubic-bezier(.8, 0, .2, 1), left .5s cubic-bezier(.8, 0, .2, 1);
-        }
+.menu-trigger span:nth-of-type(2) {
+    top: 15px;
+    width: 100%;
+    left: 0%;
+    transition: width .4s, left .4s;
+}
 
-        .menu-trigger span:nth-of-type(3) {
-            top: 30px;
-            transform: rotate(0deg);
-            transition: top .5s cubic-bezier(.8, 0, .2, 1), transform .5s cubic-bezier(.8, 0, .2, 1);
-        }
+.menu-trigger span:nth-of-type(3) {
+    top: 30px;
+    transform: rotate(0deg);
+    transition: top .4s, transform .4s;
+}
         
-/*--HAMBURGER ANIMATION------------*/
-#toggle_ham:checked ~ .menu-trigger span:nth-of-type(1) {
+/*--SIDEBAR OPEN ANIMATION--*/
+#toggle_side:checked ~ .menu-trigger span:nth-of-type(1) {
     top: 15px;
     transform: rotate(45deg);
 }
 
-#toggle_ham:checked ~ .menu-trigger span:nth-of-type(2) {
+#toggle_side:checked ~ .menu-trigger span:nth-of-type(2) {
     width: 0%;
     left: 50%;
 }
 
-#toggle_ham:checked ~ .menu-trigger span:nth-of-type(3) {
+#toggle_side:checked ~ .menu-trigger span:nth-of-type(3) {
     top: 15px;
     transform: rotate(-45deg);
 }
 
-#toggle_ham:checked ~ .menu-trigger{
+#toggle_side:checked ~ .menu-trigger{
     right: 400px;
 }
 
-#toggle_ham:checked ~ div#smartphone_menu{
+#toggle_side:checked ~ div#smartphone_menu{
     right: -125px;
 }
-/*---------------------*/
+/*----*/
 
 .menu-trigger {
     display: none;
