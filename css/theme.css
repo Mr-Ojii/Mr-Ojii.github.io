@@ -49,9 +49,9 @@ div#sidebarsu {
 }
 
 div#sidebarr {
-    background-color: aqua;
+    background-color: #0099ff;
     border: solid white 2px;
-    color: black;
+    color: white;
     font-family: 'Noto Sans JP';
     width: 20%;
     text-align: center;
@@ -60,9 +60,10 @@ div#sidebarr {
     float: right;
     padding: 0;
 }
-    div#sidebarr a {
-        color:black;
-    }
+
+div#sidebarr a {
+    color:white;
+}
 
 p.crosshead {
     font-size: larger;
@@ -96,6 +97,10 @@ div.content {
     border:solid;
     font-size:20px;
     font-family: 'Meiryo UI','ÉÅÉCÉäÉI',Meiryo;
+}
+div#sidebarr-title {
+    background-color: aqua;
+    color: black;
 }
 
 div#smartphone_menu {
@@ -157,8 +162,11 @@ body {
     }
     div#sidebarr {
         border-color: black;
+        color:black;
     }
-
+    div#sidebarr a {
+        color:black;
+    }
 }
 
 /*--SIDEBAR--*/
@@ -172,9 +180,9 @@ body {
     position: fixed;
     top: 30px;
     width: 40px;
-    height: 34px;
+    height: 40px;
     right: 20px;
-    transition:right .35s .05s;
+    transition: right .35s .05s;
 }
 
 
@@ -266,7 +274,7 @@ div#side_2020 {
 
 div#s_2020 {
     background-color: #0099ff;
-    display:none;
+    display: none;
 }
 
 div#toggle_2020 {

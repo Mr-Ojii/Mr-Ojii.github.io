@@ -10,6 +10,7 @@
     <meta http-equiv="content-language" content="ja" />
     <link rel="stylesheet" href="css/theme.css" type="text/css">
     <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="icons/favicon16.ico" type="image/x-icon">
     <link rel="shortcut icon" href="icons/favicon32.ico" type="image/x-icon">
     <link rel="shortcut icon" href="icons/favicon48.ico" type="image/x-icon">
     <link rel="shortcut icon" href="icons/favicon64.ico" type="image/x-icon">
@@ -27,9 +28,10 @@
                 <div id="sidebarcontent">
                     <div style="background-color:aqua;" class="subtitle">Link</div><br />
                     <ul style="text-align:left;margin:0px">
+                        <li><a href="https://atcoder.jp/users/Mr_Ojii">AtCoder</a>
+                        <li><a href="https://github.com/Mr-Ojii">GitHub</a></li>
                         <li><a href="https://twitter.com/Mr_Ojii">Twitter</a><br /></li>
                         <li><a href="https://www.youtube.com/channel/UCqc5Pe6yr7YOg_Fb019Q61Q">YouTube</a></li>
-                        <li><a href="https://github.com/Mr-Ojii">GitHub</a></li>
                     </ul>
                 </div>
                 <input type="checkbox" id="toggle_2020-s" style="display: none;">
@@ -41,7 +43,8 @@
                     <a href="#20200323">2020/03/23</a><br />
                     <a href="#20200405">2020/04/05</a><br />
                     <a href="#20200408">2020/04/08</a><br />
-                    <a href="#20200409">2020/04/09</a>
+                    <a href="#20200409">2020/04/09</a><br />
+                    <a href="#20200410">2020/04/10</a>
                 </div>
             </div>
             <div id="sidebarsu">
@@ -73,25 +76,47 @@
                 <a href="#20200323">2020/03/23</a><br />
                 <a href="#20200405">2020/04/05</a><br />
                 <a href="#20200408">2020/04/08</a><br />
-                <a href="#20200409">2020/04/09</a>
+                <a href="#20200409">2020/04/09</a><br />
+                <a href="#20200410">2020/04/10</a>
             </div>
         </div>
-        <div id="sidebarr" class=" subtitle">
-            Link<br />
+        <div id="sidebarr" class="subtitle">
+            <div id="sidebarr-title">
+                Link<br />
+            </div>
             <ul style="text-align:left;">
-                <li><a href="https://twitter.com/Mr_Ojii">Twitter</a><br /></li>
-                <li><a href="https://www.youtube.com/channel/UCqc5Pe6yr7YOg_Fb019Q61Q">YouTube Channel</a></li>
+                <li><a href="https://atcoder.jp/users/Mr_Ojii">AtCoder</a>
                 <li><a href="https://github.com/Mr-Ojii">GitHub</a></li>
+                <li><a href="https://twitter.com/Mr_Ojii">Twitter</a><br /></li>
+                <li><a href="https://www.youtube.com/channel/UCqc5Pe6yr7YOg_Fb019Q61Q">YouTube</a></li>
             </ul>
         </div>
         <div id="box">
+            <div class="content">
+                <p class="crosshead">
+                    <a name="20200410" class="date">2020/04/10</a>
+                </p>
+                <p>
+                    ちょっとしたレイアウトの変更をしました。<br/>
+                    <del>見やすいレイアウトって何？</del><br/>
+                    Visual Studioでは、エラー出てるけど、<br/>
+                    ブラウザのコンソールのほうではエラー出てないからいいよね。<br/><br/>
+                    次の更新では、<br/>
+                    「ページのトップに戻る」ボタンを実装しようかな～とか、<br/>
+                    自動的にサイドバーを生成してくれるJSを実装しようかな～って<br/>
+                    思ったり、思わなかったり...<br/>
+                    <br/>
+                    &lt;br&gt;を使わない改行の仕方がいまだによくわからないなぁ。
+                </p>
+            </div>
+            <br />
             <div class="content">
                 <p class="crosshead">
                     <a name="20200409" class="date">2020/04/09</a>
                 </p>
                 <p>
                     夜中に眠い目をこすりながら更新。<br />
-                    なんか、自分の垢のパスワードが他人に漏れたから、<br />
+                    なんか、自分の垢のパスワードが漏れたっぽいから、<br />
                     昨日、焦ってパスワード変更をしました。<br />
                     皆さんもお気を付けを。
                 </p>
@@ -105,10 +130,10 @@
                     はい。JS導入しました。<br />
                     といっても、ほとんど使ってないに等しいですが...<br />
                     サイドバーの要素の数を拾ってもらってるだけですね。<br />
-                    更新しなくていい要素が増えたことで、僕もチョイっとだけ楽になりました。<br />
+                    更新しなくていい要素が増えたことで、僕もちょっとだけ楽になりました。<br />
                     jQueryありがたいです。<br />
                     あと、CSSでエラーが出てたみたいなので、そこを削除しました。<br />
-                    アニメ放送延期ばかりで、ちょっと寂しいが、しょうがないね。
+                    アニメ放送延期ばかりで、ちょっと寂しいですが、しょうがないね。
                 </p>
             </div>
             <br />
@@ -153,7 +178,7 @@
                 <p>
                     昨日・今日で、TJAPlayer3改造ばかりやってました。<br />
                     同梱してるHonkehuuスキンはAviUtlとGIMPで作りました。<br />
-                    画像なのですがUtlのほうが使い慣れてるので（笑）。<br />
+                    作るのは画像なのですがUtl使い慣れてるので（笑）。<br />
                     Microsoft Visual Studio Community2019で改造してます。<br />
                     今まで、C#に触ったことなかったので、バグあるかもしれません。<br />
                     その時はIssuesに書いてネ。<br />
