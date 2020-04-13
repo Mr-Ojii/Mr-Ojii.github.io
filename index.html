@@ -23,34 +23,30 @@
 <body>
     <input type="checkbox" id="toggle_side" style="display: none;">
     <div id="smartphone_menu" class="smartphonemenu">
-        <p style="margin:20px;">
-            <div id="sidebars">
-                <div id="sidebarcontent">
-                    <div style="background-color:aqua;" class="subtitle">Link</div><br />
-                    <ul style="text-align:left;margin:0px">
-                        <li><a href="https://atcoder.jp/users/Mr_Ojii">AtCoder</a>
-                        <li><a href="https://github.com/Mr-Ojii">GitHub</a></li>
-                        <li><a href="https://twitter.com/Mr_Ojii">Twitter</a><br /></li>
-                        <li><a href="https://www.youtube.com/channel/UCqc5Pe6yr7YOg_Fb019Q61Q">YouTube</a></li>
-                    </ul>
-                </div>
-                <input type="checkbox" id="toggle_2020-s" style="display: none;">
-                <label for="toggle_2020-s"><div id="side_2020-s" class="subtitle">▼2020年(JavaScriptを有効にしてください。)</div></label>
-                <div id="s_2020-s">
-                    <a href="#20200316">2020/03/16</a><br />
-                    <a href="#20200317">2020/03/17</a><br />
-                    <a href="#20200319">2020/03/19</a><br />
-                    <a href="#20200323">2020/03/23</a><br />
-                    <a href="#20200405">2020/04/05</a><br />
-                    <a href="#20200408">2020/04/08</a><br />
-                    <a href="#20200409">2020/04/09</a><br />
-                    <a href="#20200410">2020/04/10</a>
-                </div>
+        <div id="sidebars" style="margin:20px;">
+            <div id="sidebarcontent">
+                <div style="background-color:aqua;" class="subtitle">Link</div><br />
+                <ul style="text-align:left;margin:-1em 0px 0px 0px;">
+                    <li><a href="https://atcoder.jp/users/Mr_Ojii">AtCoder</a>
+                    <li><a href="https://github.com/Mr-Ojii">GitHub</a></li>
+                    <li><a href="https://twitter.com/Mr_Ojii">Twitter</a><br /></li>
+                    <li><a href="https://www.youtube.com/channel/UCqc5Pe6yr7YOg_Fb019Q61Q">YouTube</a></li>
+                </ul>
             </div>
-            <div id="sidebarsu">
-                <br /><br />
+            <input type="checkbox" id="toggle_2020-s" style="display: none;">
+            <label for="toggle_2020-s"><div id="side_2020-s" class="subtitle">▼2020年(JavaScriptを有効にしてネ。)</div></label>
+            <div id="s_2020-s">
+                <a href="#20200316">2020/03/16</a><br />
+                <a href="#20200317">2020/03/17</a><br />
+                <a href="#20200319">2020/03/19</a><br />
+                <a href="#20200323">2020/03/23</a><br />
+                <a href="#20200405">2020/04/05</a><br />
+                <a href="#20200408">2020/04/08</a><br />
+                <a href="#20200409">2020/04/09</a><br />
+                <a href="#20200410">2020/04/10</a><br />
+                <a href="#20200413">2020/04/13</a>
             </div>
-        </p>
+        </div>
     </div>
     <label for="toggle_side" class="menu-trigger" style="position:fixed;">
         <span></span>
@@ -68,7 +64,7 @@
     <div id="maincontent">
         <div id="sidebarl">
             <input type="checkbox" id="toggle_2020" style="display: none;">
-            <label for="toggle_2020"><div id="side_2020" class="subtitle">▼2020年(JavaScriptを有効にしてください。)</div></label>
+            <label for="toggle_2020"><div id="side_2020" class="subtitle">▼2020年(JavaScriptを有効にしてネ。)</div></label>
             <div id="s_2020">
                 <a href="#20200316">2020/03/16</a><br />
                 <a href="#20200317">2020/03/17</a><br />
@@ -77,7 +73,8 @@
                 <a href="#20200405">2020/04/05</a><br />
                 <a href="#20200408">2020/04/08</a><br />
                 <a href="#20200409">2020/04/09</a><br />
-                <a href="#20200410">2020/04/10</a>
+                <a href="#20200410">2020/04/10</a><br />
+                <a href="#20200413">2020/04/13</a>
             </div>
         </div>
         <div id="sidebarr" class="subtitle">
@@ -94,18 +91,37 @@
         <div id="box">
             <div class="content">
                 <p class="crosshead">
+                    <a name="20200413" class="date">2020/04/13</a>
+                </p>
+                <p>
+                    「ページのトップに戻る」ボタンを実装する前に、<br />
+                    IEのコンソールでエラーが出てたから、修正しました。<br />
+                    Style属性を指定するために&lt;p&gt;タグで囲んでた...<br />
+                    そのStyle属性は&lt;div&gt;タグに移しました。<br />
+                    <br />
+                    今まで、うちのアップロード速度が遅くて、<br />
+                    すごく時間かかるから、画像データ使わなかったんですけど、<br />
+                    「ページのトップに戻る」ボタンどうしましょうかね。<br />
+                    <br />
+                    自分でもびっくりしたのですが、<br />
+                    このページをIEで開いても、レイアウト崩れないんですね...
+                </p>
+            </div>
+            <br />
+            <div class="content">
+                <p class="crosshead">
                     <a name="20200410" class="date">2020/04/10</a>
                 </p>
                 <p>
-                    ちょっとしたレイアウトの変更をしました。<br/>
-                    <del>見やすいレイアウトって何？</del><br/>
-                    Visual Studioでは、エラー出てるけど、<br/>
-                    ブラウザのコンソールのほうではエラー出てないからいいよね。<br/><br/>
-                    次の更新では、<br/>
-                    「ページのトップに戻る」ボタンを実装しようかな～とか、<br/>
-                    自動的にサイドバーを生成してくれるJSを実装しようかな～って<br/>
-                    思ったり、思わなかったり...<br/>
-                    <br/>
+                    ちょっとしたレイアウトの変更をしました。<br />
+                    <del>見やすいレイアウトって何？</del><br />
+                    Visual Studioでは、エラー出てるけど、<br />
+                    ブラウザのコンソールのほうではエラー出てないからいいよね。<br /><br />
+                    次の更新では、<br />
+                    「ページのトップに戻る」ボタンを実装しようかな～とか、<br />
+                    自動的にサイドバーを生成してくれるJSを実装しようかな～って<br />
+                    思ったり、思わなかったり...<br />
+                    <br />
                     &lt;br&gt;を使わない改行の仕方がいまだによくわからないなぁ。
                 </p>
             </div>
@@ -217,6 +233,10 @@
                 </p>
             </div>
         </div>
+    </div>
+    <div id="footer">
+        <hr />
+        by Mr.おじい(Mr-Ojii,Mr_Ojii)
     </div>
 </body>
 </html>
