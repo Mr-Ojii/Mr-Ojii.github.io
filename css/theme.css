@@ -273,8 +273,10 @@ div#side_2020 {
 }
 
 div#s_2020 {
+    max-height: 10em;
     background-color: #0099ff;
     display: none;
+    overflow-y: scroll;
 }
 
 div#toggle_2020 {
@@ -282,7 +284,7 @@ div#toggle_2020 {
 }
 
 #toggle_2020:checked ~ div#s_2020 {
-    display:block;
+    display: block;
 }
 
 div#side_2020-s {
@@ -292,9 +294,11 @@ div#side_2020-s {
 }
 
 div#s_2020-s {
+    max-height: 10em;
     color: black;
     background-color: #0099ff;
     display: none;
+    overflow-y: scroll;
 }
 
 div#toggle_2020-s {
