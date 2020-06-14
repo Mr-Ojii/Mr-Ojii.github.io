@@ -1,122 +1,133 @@
 a:link {
-    color: white;
+	color: white;
 }
 
 a:visited {
-    color: white;
+	color: white;
 }
 
 a:hover {
-    color: white;
+	color: white;
 }
 
 a:active {
-    color: white;
+	color: white;
+}
+
+div.sidehead {
+	background-color: #aaaaaa;
+}
+
+@media (prefers-color-scheme: light) {
+	div.sidehead {
+		background-color: aqua;
+	}
 }
 
 div#header {
-    background-color: #0099ff;
-    color: black;
-    font-family:'Noto Sans JP';
-    text-align:center;
+	background-color: #555555;
+	color: white;
+	font-family:'Noto Sans JP';
+	text-align:center;
 }
 
 div#footer {
-    text-align:right;
+	text-align:right;
 }
 
 div#sidebarl {
-    background-color: #0099ff;
-    color: black;
-    border: solid white 2px;
-    width: 20%;
-    text-align: center;
-    position: static;
-    top: 0px;
-    float: left;
-    padding: 0;
+	background-color: #555555;
+	color: black;
+	border: solid white 2px;
+	width: 20%;
+	text-align: center;
+	position: static;
+	top: 0px;
+	float: left;
+	padding: 0;
 }
 
 div#sidebars {
-    background-color: #0099ff;
-    color: black;
-    border: solid black 2px;
-    width: 330px;
-    text-align: center;
-    top: 0px;
-    float: left;
-    padding: 0;
+	background-color: #555555;
+	color: black;
+	border: solid black 2px;
+	width: 330px;
+	text-align: center;
+	top: 0px;
+	float: left;
+	padding: 0;
 }
 
 div#sidebarr {
-    background-color: #0099ff;
-    border: solid white 2px;
-    color: white;
-    font-family: 'Noto Sans JP';
-    width: 20%;
-    text-align: center;
-    position: static;
-    top: 0px;
-    float: right;
-    padding: 0;
+	background-color: #555555;
+	border: solid white 2px;
+	color: white;
+	font-family: 'Noto Sans JP';
+	width: 20%;
+	text-align: center;
+	position: static;
+	top: 0px;
+	float: right;
+	padding: 0;
 }
 
 div#sidebarr a {
-    color:white;
+	color:white;
 }
 
 p.crosshead {
-    font-size: larger;
-    font-family: 'Noto Sans JP';
-    border: inset #aaaaaa 5px;
-    border-left-color: aqua;
-    background-color: dimgray;
+	font-size: larger;
+	font-family: 'Noto Sans JP';
+	border: inset #aaaaaa 5px;
+	border-left-color: aqua;
+	background-color: dimgray;
 }
 
 div.subtitle {
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 
 p {
-    margin: 0px 0px;
+	margin: 0px 0px;
 }
 
 
 div#box {
-    background-color: #555555;
-    border: outset;
-    width: 55%;
-    margin: 0 auto 0 auto;
+	background-color: #555555;
+	border: outset;
+	width: 55%;
+	margin: 0 auto 0 auto;
 }
 
 div.content {
-    background-color: gray;
-    border:solid;
-    font-size:20px;
-    font-family: 'Meiryo UI','メイリオ',Meiryo;
-}
-div#sidebarr-title {
-    background-color: aqua;
-    color: black;
+	background-color: gray;
+	border:solid;
+	font-size:20px;
+	font-family: 'Meiryo UI','メイリオ',Meiryo;
 }
 
+div#sidebarr-title {
+	color: black;
+}
+
+
 div#smartphone_menu {
-    padding-left: 5em;
-    top:0;
-    position: fixed;
-    color: white;
-    background-color: rgba(0,0,0,0.7);
-    min-height: 10000px;
-    min-width: 500px;
-    right: -700px;
-    transition: all .4s;
+	padding-left: 5em;
+	top:0;
+	position: fixed;
+	color: white;
+	background-color: rgba(0,0,0,0.7);
+	min-height: 10000px;
+	min-width: 500px;
+	right: -700px;
+	transition: all .4s;
 }
 
 h1 {
-    font-size:300%;
+	font-size:300%;
 }
 
 
@@ -127,184 +138,203 @@ body {
 }
 
 @media (prefers-color-scheme: light){
-    a:link {
-        color: black;
-    }
+	a:link {
+		color: black;
+	}
 
-    a:visited {
-        color: black;
-    }
+	a:visited {
+		color: black;
+	}
 
-    a:hover {
-        color: black;
-    }
+	a:hover {
+		color: black;
+	}
 
-    a:active {
-        color: black;
-    }
-    body {
-        background-color: #f9f9f9;
-        color: black;
-    }
-    div#box {
-        background-color: #eee;
-    }
-    div.content {
-        background-color: lightgray;
-    }
-    p.crosshead {
-        background-color: white;
-        border: outset white 5px;
-        border-left-color: aqua;
-    }
-    div#sidebarl {
-        border-color:black;
-    }
-    div#sidebarr {
-        border-color: black;
-        color:black;
-    }
-    div#sidebarr a {
-        color:black;
-    }
+	a:active {
+		color: black;
+	}
+	body {
+		background-color: #f9f9f9;
+		color: black;
+	}
+	div#box {
+		background-color: #eee;
+	}
+	div.content {
+		background-color: lightgray;
+	}
+	p.crosshead {
+		background-color: white;
+		border: outset white 5px;
+		border-left-color: aqua;
+	}
+	div#sidebarl {
+		background-color: #0099ff;
+		color: black;
+		border-color: black;
+	}
+	div#sidebarr {
+		background-color: #0099ff;
+		border-color: black;
+		color: black;
+	}
+	div#sidebars {
+		background-color: #0099ff;
+		color: black;
+	}
+	div#sidebarr a {
+		color:black;
+	}
+	div#header {
+		background-color: #0099ff;
+		color: black;
+	}
 }
 
 /*--SIDEBAR--*/
 .menu-trigger, .menu-trigger span {
-    display: inline-block;
-    transition: left 4s;
-    box-sizing: border-box;
+	display: inline-block;
+	transition: left 4s;
+	box-sizing: border-box;
 }
 
 .menu-trigger {
-    position: fixed;
-    top: 30px;
-    width: 40px;
-    height: 40px;
-    right: 20px;
-    transition: right .35s .05s;
+	position: fixed;
+	top: 30px;
+	width: 40px;
+	height: 40px;
+	right: 20px;
+	transition: right .35s .05s;
 }
 
 
 .menu-trigger span {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #fff;
-    border-radius: 4px;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background-color: #fff;
+	border-radius: 4px;
 }
-    
+	
 .menu-trigger span:nth-of-type(1) {
-    top: 0px;
-    transform: rotate(0deg);
-    transition: top .4s, transform .4s ;
+	top: 0px;
+	transform: rotate(0deg);
+	transition: top .4s, transform .4s ;
 }
 
 .menu-trigger span:nth-of-type(2) {
-    top: 15px;
-    width: 100%;
-    left: 0%;
-    transition: width .4s, left .4s;
+	top: 15px;
+	width: 100%;
+	left: 0%;
+	transition: width .4s, left .4s;
 }
 
 .menu-trigger span:nth-of-type(3) {
-    top: 30px;
-    transform: rotate(0deg);
-    transition: top .4s, transform .4s;
+	top: 30px;
+	transform: rotate(0deg);
+	transition: top .4s, transform .4s;
 }
-        
+		
 /*--SIDEBAR OPEN ANIMATION--*/
 #toggle_side:checked ~ .menu-trigger span:nth-of-type(1) {
-    top: 15px;
-    transform: rotate(45deg);
+	top: 15px;
+	transform: rotate(45deg);
 }
 
 #toggle_side:checked ~ .menu-trigger span:nth-of-type(2) {
-    width: 0%;
-    left: 50%;
+	width: 0%;
+	left: 50%;
 }
 
 #toggle_side:checked ~ .menu-trigger span:nth-of-type(3) {
-    top: 15px;
-    transform: rotate(-45deg);
+	top: 15px;
+	transform: rotate(-45deg);
 }
 
 #toggle_side:checked ~ .menu-trigger{
-    right: 400px;
+	right: 400px;
 }
 
 #toggle_side:checked ~ div#smartphone_menu{
-    right: -125px;
+	right: -125px;
 }
 /*----*/
 
 .menu-trigger {
-    display: none;
+	display: none;
 }
 
 
 @media(max-width:1000px){
-    div#box {
-        width: 100%;
-        margin: 0 auto 0 auto;
-    }
-    div#sidebarl {
-        display:none;
-    }
-    div#sidebarr {
-        display: none;
-    }
-    .menu-trigger {
-        display: block;
-    }
-    div#sidebars {
-        font-size: 200%;
-    }
-    div.content {
-        font-size: 200%;
-    }
+	div#box {
+		width: 100%;
+		margin: 0 auto 0 auto;
+	}
+	div#sidebarl {
+		display:none;
+	}
+	div#sidebarr {
+		display: none;
+	}
+	.menu-trigger {
+		display: block;
+	}
+	div#sidebars {
+		font-size: 200%;
+	}
+	div.content {
+		font-size: 200%;
+	}
 }
 
 /*--SIDEBAR ANIMATION--*/
 div#side_2020 {
-    background-color: aqua;
-    cursor: pointer;
+	cursor: pointer;
 }
-
 div#s_2020 {
-    max-height: 10em;
-    background-color: #0099ff;
-    display: none;
-    overflow-y: scroll;
+	max-height: 10em;
+	background-color: #555555;
+	display: none;
+	overflow-y: scroll;
+}
+@media (prefers-color-scheme: light) {
+	div#s_2020 {
+		background-color: #0099ff;
+	}
 }
 
 div#toggle_2020 {
-    cursor:pointer;
+	cursor:pointer;
 }
 
 #toggle_2020:checked ~ div#s_2020 {
-    display: block;
+	display: block;
 }
 
+
 div#side_2020-s {
-    color:black;
-    background-color: aqua;
-    cursor: pointer;
+	cursor: pointer;
 }
 
 div#s_2020-s {
-    max-height: 10em;
-    color: black;
-    background-color: #0099ff;
-    display: none;
-    overflow-y: scroll;
+	max-height: 10em;
+	background-color: #555555;
+	display: none;
+	overflow-y: scroll;
+}
+
+@media (prefers-color-scheme: light) {
+
+	div#s_2020-s {
+		background-color: #0099ff;
+	}
 }
 
 div#toggle_2020-s {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 #toggle_2020-s:checked ~ div#s_2020-s {
-    display: block;
+	display: block;
 }
