@@ -1,344 +1,360 @@
 ﻿<!DOCTYPE HTML>
 <html lang="ja">
 <head>
-    <!-- ソースのコピーはやめてほしいネ！
-        (っていうコメントを入れられるかどうかのテストなので気にせずコピっテネ)-->
-    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
-    <meta name="description" content="Mr.おじいの日記のようなもの。" />
-    <meta name="keywords" content="Mr.おじい,Mr_Ojii,Mr-Ojii" />
-    <meta name="author" content="Mr.おじい" />
-    <meta http-equiv="content-language" content="ja" />
-    <link rel="stylesheet" href="css/theme.css" type="text/css">
-    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="icons/favicon16.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="icons/favicon32.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="icons/favicon48.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="icons/favicon64.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="icons\apple-touch-icon.png">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/count.js"></script>
-    <title>Gitちょっとわかってきた。</title>
+	<!-- ソースのコピーはやめてほしいネ！
+		(っていうコメントを入れられるかどうかのテストなので気にせずコピっテネ)-->
+	<meta http-equiv="content-type" content="text/html" charset="utf-8" />
+	<meta name="description" content="Mr.おじいの日記のようなもの。" />
+	<meta name="keywords" content="Mr.おじい,Mr_Ojii,Mr-Ojii" />
+	<meta name="author" content="Mr.おじい" />
+	<meta http-equiv="content-language" content="ja" />
+	<link rel="stylesheet" href="css/theme.css" type="text/css">
+	<link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="icons/favicon16.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="icons/favicon32.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="icons/favicon48.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="icons/favicon64.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="icons\apple-touch-icon.png">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/count.js"></script>
+	<title>Gitちょっとわかってきた。</title>
 </head>
 <body>
-    <div style="position:fixed;bottom:2em;right:2em;background-color:yellowgreen;opacity:0.7;border-radius: 50%;">
-        <span class="material-icons">
-            <a href="#" style="font-size:100px;">
-            arrow_upward
-            </a>
-        </span>
-    </div>
-    <input type="checkbox" id="toggle_side" style="display: none;">
-    <div id="smartphone_menu" class="smartphonemenu">
-        <div id="sidebars" style="margin:20px;">
-            <div id="sidebarcontent">
-                <div class="subtitle sidehead">Link</div><br />
-                <ul style="text-align:left;margin:-1em 0px 0px 0px;">
-                    <li><a href="https://atcoder.jp/users/Mr_Ojii">AtCoder</a>
-                    <li><a href="https://github.com/Mr-Ojii">GitHub</a></li>
-                    <li><a href="https://twitter.com/Mr_Ojii">Twitter</a><br /></li>
-                    <li><a href="https://www.youtube.com/channel/UCqc5Pe6yr7YOg_Fb019Q61Q">YouTube</a></li>
-                </ul>
-            </div>
-            <input type="checkbox" id="toggle_2020-s" style="display: none;">
-            <label for="toggle_2020-s"><div id="side_2020-s" class="subtitle sidehead">▼2020年(JavaScriptを有効にしてネ。)</div></label>
-            <div id="s_2020-s">
-                <a href="#20200316">2020/03/16</a><br />
-                <a href="#20200317">2020/03/17</a><br />
-                <a href="#20200319">2020/03/19</a><br />
-                <a href="#20200323">2020/03/23</a><br />
-                <a href="#20200405">2020/04/05</a><br />
-                <a href="#20200408">2020/04/08</a><br />
-                <a href="#20200409">2020/04/09</a><br />
-                <a href="#20200410">2020/04/10</a><br />
-                <a href="#20200413">2020/04/13</a><br />
-                <a href="#20200414">2020/04/14</a><br />
-                <a href="#20200417">2020/04/17</a><br />
-                <a href="#20200418">2020/04/18</a><br />
-                <a href="#20200421">2020/04/21</a><br />
-                <a href="#20200518">2020/05/18</a><br />
-                <a href="#20200615">2020/06/15</a>
-            </div>
-        </div>
-    </div>
-    <label for="toggle_side" class="menu-trigger" style="position:fixed;">
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
-    <div id="header">
-        <hr />
-        <h1>Mr.おじいの日記のようなもの。</h1>
-        <hr />
-        <p style="background-color:green;margin:-8px 0 0 0;color:white;">
-            C#・C++・HTML・CSS・JSなどを欲張って勉強中。
-        </p>
-    </div>
-    <div id="maincontent">
-        <div id="sidebarl">
-            <input type="checkbox" id="toggle_2020" style="display: none;">
-            <label for="toggle_2020"><div id="side_2020" class="subtitle sidehead">▼2020年(JavaScriptを有効にしてネ。)</div></label>
-            <div id="s_2020">
-                <a href="#20200316">2020/03/16</a><br />
-                <a href="#20200317">2020/03/17</a><br />
-                <a href="#20200319">2020/03/19</a><br />
-                <a href="#20200323">2020/03/23</a><br />
-                <a href="#20200405">2020/04/05</a><br />
-                <a href="#20200408">2020/04/08</a><br />
-                <a href="#20200409">2020/04/09</a><br />
-                <a href="#20200410">2020/04/10</a><br />
-                <a href="#20200413">2020/04/13</a><br />
-                <a href="#20200414">2020/04/14</a><br />
-                <a href="#20200417">2020/04/17</a><br />
-                <a href="#20200418">2020/04/18</a><br />
-                <a href="#20200421">2020/04/21</a><br />
-                <a href="#20200518">2020/05/18</a><br />
-                <a href="#20200615">2020/06/15</a>
-            </div>
-        </div>
-        <div id="sidebarr" class="subtitle">
-            <div id="sidebarr-title" class="sidehead">
-                Link<br />
-            </div>
-            <ul style="text-align:left;">
-                <li><a href="https://atcoder.jp/users/Mr_Ojii">AtCoder</a>
-                <li><a href="https://github.com/Mr-Ojii">GitHub</a></li>
-                <li><a href="https://twitter.com/Mr_Ojii">Twitter</a><br /></li>
-                <li><a href="https://www.youtube.com/channel/UCqc5Pe6yr7YOg_Fb019Q61Q">YouTube</a></li>
-            </ul>
-        </div>
-        <div id="box">
-            <div class="content">
-                <p class="crosshead">
-                    <a name="20200615" class="date">2020/06/15</a>
-                </p>
-                <p>
-                    更新止まって、また約1ヶ月...<br />
-                    眠いです。<br />
-                    ここ最近忙しくて、忙しくて。<br />
-                    ダークモードをよりダーク化しました。<br />
-                    以上で～す。<br />
-                    おやすみなさ～い。
-                </p>
-            </div>
-            <br />
-            <div class="content">
-                <p class="crosshead">
-                    <a name="20200518" class="date">2020/05/18</a>
-                </p>
-                <p>
-                    更新止まって、ほぼ1ヶ月...<br />
-                    譜面分岐バグ修正できてなかったですね。<br />
-                    まぁ、そのあと、修正しました。<br />
-                    あと、JPOSSCROLLがずれるバグとかも修正しました。<br />
-                    あと、HBSCROLLと複素数スクロールが喧嘩するバグとかも修正しました。<br />
-                    ギミック譜面用命令のバグたちも<br />
-                    どんどん修正しようと思ってるので、自分でビルドして遊んでね。<br />
-                    <br />
-                    サイドバーの調整しました。<br />
-                    まぁ、overflow-y:scrollを追加しただけなんですけどね。
-                </p>
-            </div>
-            <br />
-            <div class="content">
-                <p class="crosshead">
-                    <a name="20200421" class="date">2020/04/21</a>
-                </p>
-                <p>
-                    TJAPlayer3の最大の謎だった、譜面分岐バグがたった数行で修正できてうれしいです。<br />
-                    そろそろ、このページのサイドバーの高さの調整とかしないといけないね。がんばろ。
-                </p>
-            </div>
-            <br />
-            <div class="content">
-                <p class="crosshead">
-                    <a name="20200418" class="date">2020/04/18</a>
-                </p>
-                <p>
-                    眠いです。ついつい徹夜してしまいました。<br />
-                    体調崩すから、皆さん、早く寝てくださいね。<br />
-                    (実際に前に徹夜して体調崩した経験あり。)<br />
-                    おやすみなさい。(06:30)
-                </p>
-            </div>
-            <br />
-            <div class="content">
-                <p class="crosshead">
-                    <a name="20200417" class="date">2020/04/17</a>
-                </p>
-                <p>
-                    TJAPlayer3-fの方に付きっ切りの最近。<br />
-                    バグが思った以上に多いのですね。<br />
-                    バグ取りが大変。<br />
-                    Twitterフォローしてくれると励みになるなぁ。(棒読み)
-                </p>
-            </div>
-            <br />
-            <div class="content">
-                <p class="crosshead">
-                    <a name="20200414" class="date">2020/04/14</a>
-                </p>
-                <p>
-                    <b>「ページのトップに戻る」ボタン</b>適当に実装完了！<br />
-                    <br />
-                    こちらから、画像のアップロードをしなくていいように、<br />
-                    Material Iconsでどうにかしました。<br />
-                    スマホの場合、サイドメニューを開くと押せなくなると思いますが、<br />
-                    仕様的にどうしようもないので...<br />
-                    <br />
-                    他にやることが山積み...気合を入れて頑張ります！
-                </p>
-            </div>
-            <br />
-            <div class="content">
-                <p class="crosshead">
-                    <a name="20200413" class="date">2020/04/13</a>
-                </p>
-                <p>
-                    「ページのトップに戻る」ボタンを実装する前に、<br />
-                    IEのコンソールでエラーが出てたから、修正しました。<br />
-                    Style属性を指定するために&lt;p&gt;タグで囲んでた...<br />
-                    そのStyle属性は&lt;div&gt;タグに移しました。<br />
-                    <br />
-                    今まで、うちのアップロード速度が遅くて、<br />
-                    すごく時間かかるから、画像データ使わなかったんですけど、<br />
-                    「ページのトップに戻る」ボタンどうしましょうかね。<br />
-                    <br />
-                    自分でもびっくりしたのですが、<br />
-                    このページをIEで開いても、レイアウト崩れないんですね...
-                </p>
-            </div>
-            <br />
-            <div class="content">
-                <p class="crosshead">
-                    <a name="20200410" class="date">2020/04/10</a>
-                </p>
-                <p>
-                    ちょっとしたレイアウトの変更をしました。<br />
-                    <del>見やすいレイアウトって何？</del><br />
-                    Visual Studioでは、エラー出てるけど、<br />
-                    ブラウザのコンソールのほうではエラー出てないからいいよね。<br /><br />
-                    次の更新では、<br />
-                    「ページのトップに戻る」ボタンを実装しようかな～とか、<br />
-                    自動的にサイドバーを生成してくれるJSを実装しようかな～って<br />
-                    思ったり、思わなかったり...<br />
-                    <br />
-                    &lt;br&gt;を使わない改行の仕方がいまだによくわからないなぁ。
-                </p>
-            </div>
-            <br />
-            <div class="content">
-                <p class="crosshead">
-                    <a name="20200409" class="date">2020/04/09</a>
-                </p>
-                <p>
-                    夜中に眠い目をこすりながら更新。<br />
-                    なんか、自分の垢のパスワードが漏れたっぽいから、<br />
-                    昨日、焦ってパスワード変更をしました。<br />
-                    皆さんもお気を付けを。
-                </p>
-            </div>
-            <br />
-            <div class="content">
-                <p class="crosshead">
-                    <a name="20200408" class="date">2020/04/08</a>
-                </p>
-                <p>
-                    はい。JS導入しました。<br />
-                    といっても、ほとんど使ってないに等しいですが...<br />
-                    サイドバーの要素の数を拾ってもらってるだけですね。<br />
-                    更新しなくていい要素が増えたことで、僕もちょっとだけ楽になりました。<br />
-                    jQueryありがたいです。<br />
-                    あと、CSSでエラーが出てたみたいなので、そこを削除しました。<br />
-                    アニメ放送延期ばかりで、ちょっと寂しいですが、しょうがないね。
-                </p>
-            </div>
-            <br />
-            <div class="content">
-                <p class="crosshead">
-                    <a name="20200405" class="date">2020/04/05</a>
-                </p>
-                <p>
-                    久しぶりの更新。<br />
-                    この一週間別のことで忙しかったもので...<br />
-                    まぁ、大した更新はしてないんですが...<br />
-                    サイドバーの開くとこの範囲選択をできなくしただけです。<br />
-                    TJAPlayer3-fのほうはDiscord-RPC変えたくらいだっけ？<br /><br />
-                    このページJS使わないようにしてたけど。<br />
-                    多分大体の人がJSブロックしてないよね。<br />
-                    ってことで、いつかJSで動き作ろっかな。<br />
-                    結構疲れているので失礼しま～す。
-                </p>
-            </div>
-            <br />
-            <div class="content">
-                <p class="crosshead">
-                    <a name="20200323" class="date">2020/03/23</a>
-                </p>
-                <p>
-                    OSSライセンスの概要がわかりません。<br />
-                    いつかOSSを配布しようと思っているので...<br />
-                    頑張って理解します。<br />
-                    あと、「.gitignore」が反応しないのですが...<br />
-                    どうすれば...<br /><br />
+	<div style="position:fixed;bottom:2em;right:2em;background-color:yellowgreen;opacity:0.7;border-radius: 50%;">
+		<span class="material-icons">
+			<a href="#" style="font-size:100px;">
+			arrow_upward
+			</a>
+		</span>
+	</div>
+	<input type="checkbox" id="toggle_side" style="display: none;">
+	<div id="smartphone_menu" class="smartphonemenu">
+		<div id="sidebars" style="margin:20px;">
+			<div id="sidebarcontent">
+				<div class="subtitle sidehead">Link</div><br />
+				<ul style="text-align:left;margin:-1em 0px 0px 0px;">
+					<li><a href="https://atcoder.jp/users/Mr_Ojii">AtCoder</a>
+					<li><a href="https://github.com/Mr-Ojii">GitHub</a></li>
+					<li><a href="https://twitter.com/Mr_Ojii">Twitter</a><br /></li>
+					<li><a href="https://www.youtube.com/channel/UCqc5Pe6yr7YOg_Fb019Q61Q">YouTube</a></li>
+				</ul>
+			</div>
+			<input type="checkbox" id="toggle_2020-s" style="display: none;">
+			<label for="toggle_2020-s"><div id="side_2020-s" class="subtitle sidehead">▼2020年(JavaScriptを有効にしてネ。)</div></label>
+			<div id="s_2020-s">
+				<a href="#20200316">2020/03/16</a><br />
+				<a href="#20200317">2020/03/17</a><br />
+				<a href="#20200319">2020/03/19</a><br />
+				<a href="#20200323">2020/03/23</a><br />
+				<a href="#20200405">2020/04/05</a><br />
+				<a href="#20200408">2020/04/08</a><br />
+				<a href="#20200409">2020/04/09</a><br />
+				<a href="#20200410">2020/04/10</a><br />
+				<a href="#20200413">2020/04/13</a><br />
+				<a href="#20200414">2020/04/14</a><br />
+				<a href="#20200417">2020/04/17</a><br />
+				<a href="#20200418">2020/04/18</a><br />
+				<a href="#20200421">2020/04/21</a><br />
+				<a href="#20200518">2020/05/18</a><br />
+				<a href="#20200615">2020/06/15</a><br />
+				<a href="#20200721">2020/07/21</a>
+			</div>
+		</div>
+	</div>
+	<label for="toggle_side" class="menu-trigger" style="position:fixed;">
+		<span></span>
+		<span></span>
+		<span></span>
+	</label>
+	<div id="header">
+		<hr />
+		<h1>Mr.おじいの日記のようなもの。</h1>
+		<hr />
+		<p style="background-color:green;margin:-8px 0 0 0;color:white;">
+			C#・C++・HTML・CSS・JSなどを欲張って勉強中。
+		</p>
+	</div>
+	<div id="maincontent">
+		<div id="sidebarl">
+			<input type="checkbox" id="toggle_2020" style="display: none;">
+			<label for="toggle_2020"><div id="side_2020" class="subtitle sidehead">▼2020年(JavaScriptを有効にしてネ。)</div></label>
+			<div id="s_2020">
+				<a href="#20200316">2020/03/16</a><br />
+				<a href="#20200317">2020/03/17</a><br />
+				<a href="#20200319">2020/03/19</a><br />
+				<a href="#20200323">2020/03/23</a><br />
+				<a href="#20200405">2020/04/05</a><br />
+				<a href="#20200408">2020/04/08</a><br />
+				<a href="#20200409">2020/04/09</a><br />
+				<a href="#20200410">2020/04/10</a><br />
+				<a href="#20200413">2020/04/13</a><br />
+				<a href="#20200414">2020/04/14</a><br />
+				<a href="#20200417">2020/04/17</a><br />
+				<a href="#20200418">2020/04/18</a><br />
+				<a href="#20200421">2020/04/21</a><br />
+				<a href="#20200518">2020/05/18</a><br />
+				<a href="#20200615">2020/06/15</a><br />
+				<a href="#20200721">2020/07/21</a>
+			</div>
+		</div>
+		<div id="sidebarr" class="subtitle">
+			<div id="sidebarr-title" class="sidehead">
+				Link<br />
+			</div>
+			<ul style="text-align:left;">
+				<li><a href="https://atcoder.jp/users/Mr_Ojii">AtCoder</a>
+				<li><a href="https://github.com/Mr-Ojii">GitHub</a></li>
+				<li><a href="https://twitter.com/Mr_Ojii">Twitter</a><br /></li>
+				<li><a href="https://www.youtube.com/channel/UCqc5Pe6yr7YOg_Fb019Q61Q">YouTube</a></li>
+			</ul>
+		</div>
+		<div id="box">
+			<div class="content">
+				<p class="crosshead">
+					<a name="20200721" class="date">2020/07/21</a>
+				</p>
+				<p>
+					またまた、更新止まって、また約1ヶ月...<br />
+					TJAPlayer3-fがある程度広まってしまったので、後戻りできない状態になりました。<br />
+					まぁ、更新はのんびり続けるつもりですので。<br />
+					TJAPlayer3-fはopenglブランチを新しく作りました。<br />
+					そちらのほうで、FDKを改造し、OpenTKを使い、OpenGLで描画する改造TJAPlayer3を作っていますので、masterの更新頻度が少なくなります。<br />
+					少々お待ちください。
+				</p>
+			</div>
+			<br />
+			<div class="content">
+				<p class="crosshead">
+					<a name="20200615" class="date">2020/06/15</a>
+				</p>
+				<p>
+					更新止まって、また約1ヶ月...<br />
+					眠いです。<br />
+					ここ最近忙しくて、忙しくて。<br />
+					ダークモードをよりダーク化しました。<br />
+					以上で～す。<br />
+					おやすみなさ～い。
+				</p>
+			</div>
+			<br />
+			<div class="content">
+				<p class="crosshead">
+					<a name="20200518" class="date">2020/05/18</a>
+				</p>
+				<p>
+					更新止まって、ほぼ1ヶ月...<br />
+					譜面分岐バグ修正できてなかったですね。<br />
+					まぁ、そのあと、修正しました。<br />
+					あと、JPOSSCROLLがずれるバグとかも修正しました。<br />
+					あと、HBSCROLLと複素数スクロールが喧嘩するバグとかも修正しました。<br />
+					ギミック譜面用命令のバグたちも<br />
+					どんどん修正しようと思ってるので、自分でビルドして遊んでね。<br />
+					<br />
+					サイドバーの調整しました。<br />
+					まぁ、overflow-y:scrollを追加しただけなんですけどね。
+				</p>
+			</div>
+			<br />
+			<div class="content">
+				<p class="crosshead">
+					<a name="20200421" class="date">2020/04/21</a>
+				</p>
+				<p>
+					TJAPlayer3の最大の謎だった、譜面分岐バグがたった数行で修正できてうれしいです。<br />
+					そろそろ、このページのサイドバーの高さの調整とかしないといけないね。がんばろ。
+				</p>
+			</div>
+			<br />
+			<div class="content">
+				<p class="crosshead">
+					<a name="20200418" class="date">2020/04/18</a>
+				</p>
+				<p>
+					眠いです。ついつい徹夜してしまいました。<br />
+					体調崩すから、皆さん、早く寝てくださいね。<br />
+					(実際に前に徹夜して体調崩した経験あり。)<br />
+					おやすみなさい。(06:30)
+				</p>
+			</div>
+			<br />
+			<div class="content">
+				<p class="crosshead">
+					<a name="20200417" class="date">2020/04/17</a>
+				</p>
+				<p>
+					TJAPlayer3-fの方に付きっ切りの最近。<br />
+					バグが思った以上に多いのですね。<br />
+					バグ取りが大変。<br />
+					Twitterフォローしてくれると励みになるなぁ。(棒読み)
+				</p>
+			</div>
+			<br />
+			<div class="content">
+				<p class="crosshead">
+					<a name="20200414" class="date">2020/04/14</a>
+				</p>
+				<p>
+					<b>「ページのトップに戻る」ボタン</b>適当に実装完了！<br />
+					<br />
+					こちらから、画像のアップロードをしなくていいように、<br />
+					Material Iconsでどうにかしました。<br />
+					スマホの場合、サイドメニューを開くと押せなくなると思いますが、<br />
+					仕様的にどうしようもないので...<br />
+					<br />
+					他にやることが山積み...気合を入れて頑張ります！
+				</p>
+			</div>
+			<br />
+			<div class="content">
+				<p class="crosshead">
+					<a name="20200413" class="date">2020/04/13</a>
+				</p>
+				<p>
+					「ページのトップに戻る」ボタンを実装する前に、<br />
+					IEのコンソールでエラーが出てたから、修正しました。<br />
+					Style属性を指定するために&lt;p&gt;タグで囲んでた...<br />
+					そのStyle属性は&lt;div&gt;タグに移しました。<br />
+					<br />
+					今まで、うちのアップロード速度が遅くて、<br />
+					すごく時間かかるから、画像データ使わなかったんですけど、<br />
+					「ページのトップに戻る」ボタンどうしましょうかね。<br />
+					<br />
+					自分でもびっくりしたのですが、<br />
+					このページをIEで開いても、レイアウト崩れないんですね...
+				</p>
+			</div>
+			<br />
+			<div class="content">
+				<p class="crosshead">
+					<a name="20200410" class="date">2020/04/10</a>
+				</p>
+				<p>
+					ちょっとしたレイアウトの変更をしました。<br />
+					<del>見やすいレイアウトって何？</del><br />
+					Visual Studioでは、エラー出てるけど、<br />
+					ブラウザのコンソールのほうではエラー出てないからいいよね。<br /><br />
+					次の更新では、<br />
+					「ページのトップに戻る」ボタンを実装しようかな～とか、<br />
+					自動的にサイドバーを生成してくれるJSを実装しようかな～って<br />
+					思ったり、思わなかったり...<br />
+					<br />
+					&lt;br&gt;を使わない改行の仕方がいまだによくわからないなぁ。
+				</p>
+			</div>
+			<br />
+			<div class="content">
+				<p class="crosshead">
+					<a name="20200409" class="date">2020/04/09</a>
+				</p>
+				<p>
+					夜中に眠い目をこすりながら更新。<br />
+					なんか、自分の垢のパスワードが漏れたっぽいから、<br />
+					昨日、焦ってパスワード変更をしました。<br />
+					皆さんもお気を付けを。
+				</p>
+			</div>
+			<br />
+			<div class="content">
+				<p class="crosshead">
+					<a name="20200408" class="date">2020/04/08</a>
+				</p>
+				<p>
+					はい。JS導入しました。<br />
+					といっても、ほとんど使ってないに等しいですが...<br />
+					サイドバーの要素の数を拾ってもらってるだけですね。<br />
+					更新しなくていい要素が増えたことで、僕もちょっとだけ楽になりました。<br />
+					jQueryありがたいです。<br />
+					あと、CSSでエラーが出てたみたいなので、そこを削除しました。<br />
+					アニメ放送延期ばかりで、ちょっと寂しいですが、しょうがないね。
+				</p>
+			</div>
+			<br />
+			<div class="content">
+				<p class="crosshead">
+					<a name="20200405" class="date">2020/04/05</a>
+				</p>
+				<p>
+					久しぶりの更新。<br />
+					この一週間別のことで忙しかったもので...<br />
+					まぁ、大した更新はしてないんですが...<br />
+					サイドバーの開くとこの範囲選択をできなくしただけです。<br />
+					TJAPlayer3-fのほうはDiscord-RPC変えたくらいだっけ？<br /><br />
+					このページJS使わないようにしてたけど。<br />
+					多分大体の人がJSブロックしてないよね。<br />
+					ってことで、いつかJSで動き作ろっかな。<br />
+					結構疲れているので失礼しま～す。
+				</p>
+			</div>
+			<br />
+			<div class="content">
+				<p class="crosshead">
+					<a name="20200323" class="date">2020/03/23</a>
+				</p>
+				<p>
+					OSSライセンスの概要がわかりません。<br />
+					いつかOSSを配布しようと思っているので...<br />
+					頑張って理解します。<br />
+					あと、「.gitignore」が反応しないのですが...<br />
+					どうすれば...<br /><br />
 
-                    2020/03/23 13:50追記<br />
-                    Gitのキャッシュのせいだったみたいです。<br />
-                    キャッシュ削除して、もう一度addしたらうまくいきました。
-                </p>
-            </div>
-            <br />
-            <div class="content">
-                <p class="crosshead">
-                    <a name="20200319" class="date">2020/03/19</a>
-                </p>
-                <p>
-                    昨日・今日で、TJAPlayer3改造ばかりやってました。<br />
-                    同梱してるHonkehuuスキンはAviUtlとGIMPで作りました。<br />
-                    作るのは画像なのですがUtl使い慣れてるので（笑）。<br />
-                    Microsoft Visual Studio Community2019で改造してます。<br />
-                    今まで、C#に触ったことなかったので、バグあるかもしれません。<br />
-                    その時はIssuesに書いてネ。<br />
-                    まぁ、バイナリ配布してないので、<br />
-                    自分でビルドしてもらうことになるのですが...<br /><br />
-                    あと、スマホで見たときに、文字が大きくなるようにしました。<br />
-                    読みやすくなったと思います。
-                </p>
-            </div>
-            <br />
-            <div class="content">
-                <p class="crosshead">
-                    <a name="20200317" class="date">2020/03/17</a>
-                </p>
-                <p>
-                    404.html・サイドバーの追加しました。<br />
-                    <a href="aaaa.html">ここを踏むと404エラー見れると思います。</a><br />
-                    あと、CSSを書き換えて、ダークテーマに多分対応しました。<br />
-                    どちらかというと、ダークテーマメインで、<br />
-                    ブラウザのテーマがライトテーマだと、<br />
-                    白っぽくなるような形なのですが。<br /><br />
-                    スマホにも対応したと思います。<br />
-                    手元にスマホがないので確認はできなかったのですが。<br /><br />
-                    ※テーマごとの挙動はMozilla Firefoxと<br />
-                    <span style="padding-left:1em;">Microsoft Edge(Chromiumベース版)で確認しています。</span>
-                </p>
-            </div>
-            <br />
-            <div class="content">
-                <p class="crosshead">
-                    <a name="20200316" class="date">2020/03/16</a>
-                </p>
-                <p>
-                    このページを初めて開きました。<br>
-                    HTML・CSS・JS勉強中です。
-                </p>
-            </div>
-        </div>
-    </div>
-    <div id="footer">
-        <hr />
-        by Mr.おじい(Mr-Ojii,Mr_Ojii)
-    </div>
+					2020/03/23 13:50追記<br />
+					Gitのキャッシュのせいだったみたいです。<br />
+					キャッシュ削除して、もう一度addしたらうまくいきました。
+				</p>
+			</div>
+			<br />
+			<div class="content">
+				<p class="crosshead">
+					<a name="20200319" class="date">2020/03/19</a>
+				</p>
+				<p>
+					昨日・今日で、TJAPlayer3改造ばかりやってました。<br />
+					同梱してるHonkehuuスキンはAviUtlとGIMPで作りました。<br />
+					作るのは画像なのですがUtl使い慣れてるので（笑）。<br />
+					Microsoft Visual Studio Community2019で改造してます。<br />
+					今まで、C#に触ったことなかったので、バグあるかもしれません。<br />
+					その時はIssuesに書いてネ。<br />
+					まぁ、バイナリ配布してないので、<br />
+					自分でビルドしてもらうことになるのですが...<br /><br />
+					あと、スマホで見たときに、文字が大きくなるようにしました。<br />
+					読みやすくなったと思います。
+				</p>
+			</div>
+			<br />
+			<div class="content">
+				<p class="crosshead">
+					<a name="20200317" class="date">2020/03/17</a>
+				</p>
+				<p>
+					404.html・サイドバーの追加しました。<br />
+					<a href="aaaa.html">ここを踏むと404エラー見れると思います。</a><br />
+					あと、CSSを書き換えて、ダークテーマに多分対応しました。<br />
+					どちらかというと、ダークテーマメインで、<br />
+					ブラウザのテーマがライトテーマだと、<br />
+					白っぽくなるような形なのですが。<br /><br />
+					スマホにも対応したと思います。<br />
+					手元にスマホがないので確認はできなかったのですが。<br /><br />
+					※テーマごとの挙動はMozilla Firefoxと<br />
+					<span style="padding-left:1em;">Microsoft Edge(Chromiumベース版)で確認しています。</span>
+				</p>
+			</div>
+			<br />
+			<div class="content">
+				<p class="crosshead">
+					<a name="20200316" class="date">2020/03/16</a>
+				</p>
+				<p>
+					このページを初めて開きました。<br>
+					HTML・CSS・JS勉強中です。
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<hr />
+		by Mr.おじい(Mr-Ojii,Mr_Ojii)
+	</div>
 </body>
 </html>
