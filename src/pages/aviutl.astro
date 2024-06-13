@@ -11,15 +11,15 @@ interface PluginData
   nicovideoID : string;
 }
 
-interface HostList
+interface Category
 {
-  hostName : string;
+  name : string;
   pluginsList : PluginData[];
 }
 
-const list : HostList[] = [
+const list : Category[] = [
   {
-    hostName : "AviUtl プラグイン",
+    name : "AviUtl プラグイン",
     pluginsList : [
       {
         name : "ImageMagick File Reader",
@@ -52,7 +52,7 @@ const list : HostList[] = [
     ],
   },
   {
-    hostName : "AviUtl スクリプト",
+    name : "AviUtl スクリプト",
     pluginsList : [
       {
         name : "ImageLoader_M",
@@ -92,7 +92,7 @@ const list : HostList[] = [
     ],
   },
   {
-    hostName : "Susie プラグイン",
+    name : "Susie プラグイン",
     pluginsList : [
       {
         name : "ifheif",
@@ -115,11 +115,11 @@ const titlestr="Mr-OjiiのAviUtl関連ソフトウェア";
     <h2>目次</h2>
     <div class="index">
       {
-        list.map((hostitem) => (
-          <h3>{hostitem.hostName}</h3>
+        list.map((categoryitem) => (
+          <h3>{categoryitem.name}</h3>
           <ul>
             {
-              hostitem.pluginsList.map((item) => {
+              categoryitem.pluginsList.map((item) => {
                 const itemhref = "#" + item.name;
                 return (
                   <a href={itemhref}><li>{item.name}</li></a>
@@ -133,11 +133,11 @@ const titlestr="Mr-OjiiのAviUtl関連ソフトウェア";
 
     <h2>内容</h2>
 		{
-			list.map((hostitem) => (
-				<h3>{hostitem.hostName}</h3>
+			list.map((categoryitem) => (
+				<h3>{categoryitem.name}</h3>
 				<ul role="list" class="link-card-grid">
 					{
-						hostitem.pluginsList.map((item) => (
+						categoryitem.pluginsList.map((item) => (
 							<Card
 								name={item.name}
 								repoName={item.repoName}
