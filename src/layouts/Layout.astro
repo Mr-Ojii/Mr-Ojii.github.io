@@ -4,6 +4,22 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const schema = JSON.stringify({
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "Mr-Ojii's Page",
+	"url": "https://mr-ojii.github.io",
+	"logo": "https://mr-ojii.github.io/favicon.ico",
+	"sameAs": [
+		"https://github.com/Mr-Ojii",
+		"https://scrapbox.io/Mr-Ojii",
+		"https://x.com/Mr_Ojii",
+	],
+	"author": {
+		"@type": "Person",
+		"name": "Mr-Ojii"
+  	},
+})
 ---
 
 <!doctype html>
@@ -27,6 +43,9 @@ const { title } = Astro.props;
 		<meta property="og:image" content="https://mr-ojii.github.io/ogp_image.png" />
 
 		<meta name="generator" content={Astro.generator} />
+
+		{/*Schema.org (JSON-LD)*/}
+		<script is:inline type="application/ld+json" set:html={schema}></script>
 		<title>{title}</title>
 	</head>
 	<body>
