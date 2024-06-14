@@ -1,13 +1,19 @@
 ---
+import dayjs from 'dayjs';
+
 interface Props {
 	title: string;
 }
+
+// ビルド時に実行されるので、これで良い
+const buildDate = dayjs(new Date()).format("YYYY-MM-DD");
 
 const { title } = Astro.props;
 const schema = JSON.stringify({
 	"@context": "https://schema.org",
 	"@type": "WebSite",
 	"name": "Mr-Ojii's Page",
+	"datePublished": buildDate,
 	"url": "https://mr-ojii.github.io",
 	"logo": "https://mr-ojii.github.io/favicon.ico",
 	"sameAs": [
