@@ -9,6 +9,7 @@ interface PluginData
   search : string;
   description : string;
   nicovideoIDs : string[];
+  youtubeIDs : string[];
 }
 
 interface Category
@@ -26,7 +27,8 @@ const list : Category[] = [
         repoName : "AviUtl-ImageMagick-File-Reader",
         search : "",
         description : "ImageMagickを使用し、画像ファイルの読み込みを試みる入力プラグイン(連番対応)",
-        nicovideoIDs: [],
+        nicovideoIDs : [],
+        youtubeIDs : [],
       },
       {
         name : "AviUtl-Shutdown-Plugin",
@@ -34,6 +36,7 @@ const list : Category[] = [
         search : "",
         description : "起動から30秒後にAviUtlをシャットダウンするプラグイン・スクリプト(ネタプラグイン)",
         nicovideoIDs : [],
+        youtubeIDs : []
       },
       {
         name : "L-SMASH Works (Mr-Ojii版)",
@@ -41,6 +44,7 @@ const list : Category[] = [
         search : "Mr-Ojii_Mr-Ojii",
         description : "お馴染みの入力プラグイン",
         nicovideoIDs : [],
+        youtubeIDs : [],
       },
       {
         name : "MotionTracking MK-II Plus",
@@ -48,6 +52,7 @@ const list : Category[] = [
         search : "",
         description : "MaverickTse氏のMotionTracking MK-IIに改良を加えたプラグイン",
         nicovideoIDs : ["sm43747879"],
+        youtubeIDs : ["GY4IOFGnIgU"],
       },
     ],
   },
@@ -60,6 +65,7 @@ const list : Category[] = [
         search : "",
         description : "最大画像サイズを超える画像のロードを行うスクリプト",
         nicovideoIDs : [],
+        youtubeIDs : [],
       },
       {
         name : "Bevel_And_Emboss_M",
@@ -67,6 +73,7 @@ const list : Category[] = [
         search : "",
         description : "gometh兄貴のベベルとエンボス スクリプトを高速化する試み",
         nicovideoIDs : ["sm40185819"],
+        youtubeIDs : [],
       },
       {
         name : "TA_HideSquare_M",
@@ -74,6 +81,7 @@ const list : Category[] = [
         search : "",
         description : "四角に隠れて登場するスクリプト",
         nicovideoIDs : ["sm43186514"],
+        youtubeIDs : ["n1iavHfEYic"],
       },
       {
         name : "AutoClipping_M",
@@ -81,6 +89,7 @@ const list : Category[] = [
         search : "",
         description : "透明部分を自動的にクリッピングするスクリプト",
         nicovideoIDs : ["sm43517777"],
+        youtubeIDs : ["A6olgoC3fEk"],
       },
       {
         name : "MosaicBorder_M",
@@ -88,6 +97,7 @@ const list : Category[] = [
         search : "",
         description : "モザイク縁取りスクリプト",
         nicovideoIDs : ["sm43630558"],
+        youtubeIDs : ["l_MTGvw3gKI"],
       },
     ],
   },
@@ -100,6 +110,7 @@ const list : Category[] = [
         search : "",
         description : "HEIF(.heif/.heic)/AVIF(.avif)を読み込むためのプラグイン(AviUtlの拡張編集でも使用できます)",
         nicovideoIDs : [],
+        youtubeIDs : [],
       },
     ],
   },
@@ -112,6 +123,7 @@ const list : Category[] = [
         search : "",
         description : "AviUtl(拡張編集)のオブジェクトファイルであるexoの言語変換用ソフトウェア",
         nicovideoIDs : [],
+        youtubeIDs : [],
       }
     ]
   }
@@ -156,6 +168,7 @@ const titlestr="Mr-OjiiのAviUtl関連ソフトウェア";
 								body={item.description}
                 search={item.search}
                 nicovideoIDs={item.nicovideoIDs}
+                youtubeIDs={item.youtubeIDs}
 								client:load
 							/>
 						))

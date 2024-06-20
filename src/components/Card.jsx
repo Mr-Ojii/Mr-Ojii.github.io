@@ -53,8 +53,20 @@ export default function Card(props) {
                     props.nicovideoIDs ?
                         <p>
                         {
-                            props.nicovideoIDs.map((output, index) => {
-                                return <a class="video_href" href={`https://www.nicovideo.jp/watch/${output}`} target="_blank" rel="noreferrer noopener"><wbr/>ニコ動{index == 0 ? "" : `${index + 1}`}</a>
+                            props.nicovideoIDs.map((id, index) => {
+                                return <a class="video_href" href={`https://www.nicovideo.jp/watch/${id}`} target="_blank" rel="noreferrer noopener"><wbr/>ニコ動{index == 0 ? "" : `${index + 1}`}</a>
+                            })
+                        }
+                        </p>
+                        :
+                        ""
+                }
+                {
+                    props.youtubeIDs ?
+                        <p>
+                        {
+                            props.youtubeIDs.map((id, index) => {
+                                return <a class="video_href" href={`https://youtu.be/${id}`} target="_blank" rel="noreferrer noopener"><wbr/>YouTube{index == 0 ? "" : `${index + 1}`}</a>
                             })
                         }
                         </p>
