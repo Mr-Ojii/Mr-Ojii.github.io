@@ -77,3 +77,7 @@ p > a {
 p > a:is(:hover) {
     color: rgb(var(--release-accent-light));
 }
+
+.video_href {
+    margin-right: 0.5em;
+}

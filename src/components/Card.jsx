@@ -50,9 +50,16 @@ export default function Card(props) {
                     {props.body}
                 </p>
                 {
-                    props.nicovideoID ?
-                    <p><a href={`https://www.nicovideo.jp/watch/${props.nicovideoID}`} target="_blank" rel="noreferrer noopener"><wbr/>ニコ動</a></p> :
-                    <></>
+                    props.nicovideoIDs ?
+                        <p>
+                        {
+                            props.nicovideoIDs.map((output, index) => {
+                                return <a class="video_href" href={`https://www.nicovideo.jp/watch/${output}`} target="_blank" rel="noreferrer noopener"><wbr/>ニコ動{index == 0 ? "" : `${index + 1}`}</a>
+                            })
+                        }
+                        </p>
+                        :
+                        ""
                 }
                 <div className="release-card">
                     <a href={downloadUrl}>{releaseName}</a>
