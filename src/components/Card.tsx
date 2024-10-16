@@ -2,7 +2,16 @@
 import { useState, useEffect } from "preact/hooks";
 import "./Card.css"
 
-export default function Card(props) {
+interface Props {
+    name: string,
+    repoName: string,
+    body: string,
+    search: string,
+    nicovideoIDs: Array<string>,
+    youtubeIDs: Array<string>,
+}
+
+export default function Card(props: Props) {
     const repoUrl = "https://github.com/Mr-Ojii/" + props.repoName;
     const apiUrl = "https://api.github.com/repos/Mr-Ojii/" + props.repoName;
     const releasesApiUrl = apiUrl + "/releases" ;

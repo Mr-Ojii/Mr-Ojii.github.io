@@ -1,8 +1,8 @@
 ---
-import dayjs from 'dayjs';
+import dayjs from "dayjs";
 
 interface Props {
-	title: string;
+  title: string;
 }
 
 // ビルド時に実行されるので、これで良い
@@ -10,88 +10,91 @@ const buildDate = dayjs(new Date()).format("YYYY-MM-DD");
 
 const { title } = Astro.props;
 const schema = JSON.stringify({
-	"@context": "https://schema.org",
-	"@type": "WebSite",
-	"name": "Mr-Ojii's Page",
-	"datePublished": buildDate,
-	"url": "https://mr-ojii.github.io",
-	"image": "https://mr-ojii.github.io/favicon.ico",
-	"sameAs": [
-		"https://github.com/Mr-Ojii",
-		"https://scrapbox.io/Mr-Ojii",
-		"https://x.com/Mr_Ojii",
-	],
-	"author": {
-		"@type": "Person",
-		"name": "Mr-Ojii"
-	},
-})
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Mr-Ojii's Page",
+  datePublished: buildDate,
+  url: "https://mr-ojii.github.io",
+  image: "https://mr-ojii.github.io/favicon.ico",
+  sameAs: [
+    "https://github.com/Mr-Ojii",
+    "https://scrapbox.io/Mr-Ojii",
+    "https://x.com/Mr_Ojii",
+  ],
+  author: {
+    "@type": "Person",
+    name: "Mr-Ojii",
+  },
+});
 ---
 
 <!doctype html>
 <html lang="ja">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="mage/vnd.microsoft.icon" href="/favicon.ico" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="mage/vnd.microsoft.icon" href="/favicon.ico" />
 
-		{/* Twitter */}
-		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:site" content="@Mr_Ojii" />
+    {/* Twitter */}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@Mr_Ojii" />
 
-		{/* OGP */}
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content="Mr-OjiiのWebページ" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://mr-ojii.github.io/" />
-		<meta property="og:site_name" content="Mr-Ojii" />
-		<meta property="og:image" content="https://mr-ojii.github.io/ogp_image.png" />
+    {/* OGP */}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content="Mr-OjiiのWebページ" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mr-ojii.github.io/" />
+    <meta property="og:site_name" content="Mr-Ojii" />
+    <meta
+      property="og:image"
+      content="https://mr-ojii.github.io/ogp_image.png"
+    />
 
-		<meta name="generator" content={Astro.generator} />
+    <meta name="generator" content={Astro.generator} />
 
-		{/*Schema.org (JSON-LD)*/}
-		<script is:inline type="application/ld+json" set:html={schema}></script>
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    {/*Schema.org (JSON-LD)*/}
+    <script is:inline type="application/ld+json" set:html={schema} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--release-accent: 250, 50, 63;
-		--accent-light: 224, 204, 250;
-		--release-accent-light: 250, 100, 110;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-		--release-accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--release-accent)),
-			rgb(var(--release-accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  :root {
+    --accent: 136, 58, 234;
+    --release-accent: 250, 50, 63;
+    --accent-light: 224, 204, 250;
+    --release-accent-light: 250, 100, 110;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+    --release-accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--release-accent)),
+      rgb(var(--release-accent-light)) 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background: #13151a;
+    background-size: 224px;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
 </style>
