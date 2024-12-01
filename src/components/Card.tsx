@@ -51,7 +51,7 @@ export default function Card(props: Props) {
 
     return(
         <li className="link-card">
-            <a name={props.name} href={repoUrl}>
+            <a id={props.name} href={repoUrl}>
                 <h3>
                     {props.name}
                 </h3>
