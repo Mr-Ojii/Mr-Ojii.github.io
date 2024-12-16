@@ -1,21 +1,12 @@
 ---
+import { type RepoData } from '../interfaces/RepoData';
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.tsx';
-
-interface PluginData
-{
-  name : string;
-  repoName : string;
-  search : string;
-  description : string;
-  nicovideoIDs : string[];
-  youtubeIDs : string[];
-}
 
 interface Category
 {
   name : string;
-  pluginsList : PluginData[];
+  pluginsList : RepoData[];
 }
 
 const list : Category[] = [
