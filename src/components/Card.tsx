@@ -1,17 +1,9 @@
 // .jsxファイル内の先頭に宣言
 import { useState, useEffect } from "preact/hooks";
+import type { RepoData } from "../interfaces/RepoData";
 import "./Card.css"
 
-interface Props {
-    name: string,
-    repoName: string,
-    body: string,
-    search: string,
-    nicovideoIDs: Array<string>,
-    youtubeIDs: Array<string>,
-}
-
-export default function Card(props: Props) {
+export default function Card(props: RepoData) {
     const repoUrl = "https://github.com/Mr-Ojii/" + props.repoName;
     const apiUrl = "https://api.github.com/repos/Mr-Ojii/" + props.repoName;
     const releasesApiUrl = apiUrl + "/releases" ;
@@ -56,7 +48,7 @@ export default function Card(props: Props) {
                     {props.name}
                 </h3>
                 <p>
-                    {props.body}
+                    {props.description}
                 </p>
                 {
                     props.nicovideoIDs ?
