@@ -1,7 +1,8 @@
 ---
 import { type RepoData } from '../interfaces/RepoData';
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.tsx';
+import Card from '../components/Card.astro';
+import { isRemoteAllowed } from 'astro/assets/utils';
 
 interface Category
 {
@@ -144,13 +145,9 @@ const titlestr="Mr-Ojiiのアプリ";
           {
             categoryitem.repoList.map((item) => (
               <Card
-                name={item.name}
-                repoName={item.repoName}
-                description={item.description}
-                search={item.search}
-                nicovideoIDs={item.nicovideoIDs}
-                youtubeIDs={item.youtubeIDs}
-                client:load
+                href={"https://github.com/Mr-Ojii/"+ item.repoName}
+                title={item.name}
+                body={item.description}
               />
             ))
           }
