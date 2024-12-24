@@ -22,6 +22,7 @@ main[data-astro-cid-j7pv25f6]{margin:auto;padding:1rem;width:800px;max-width:cal
       const cards = document.getElementsByTagName("li");
       for (let i = 0; i < cards.length; i++) {
         cards[i].style.animation = "bump 0.5s infinite";
+        cards[i].style.transformOrigin = "center bottom 0";
       }
     }
   });
