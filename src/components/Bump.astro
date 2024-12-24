@@ -1,6 +1,16 @@
 ---
 ---
 <script type="text/javascript" is:inline>
+  function update_bump() {
+    const bpm_dom = document.getElementById("bump-bpm");
+bpm_dom.style.display = "block";
+    const bpm = Number(bpm_dom.value);
+    const cards = document.getElementsByTagName("li");
+    for (let i = 0; i < cards.length; i++) {
+      cards[i].style.animation = `bump ${60 / bpm}s infinite`;
+      cards[i].style.transformOrigin = "center bottom 0";
+    }
+  }
   let arr = [
     "ArrowUp",
     "ArrowUp",
@@ -18,14 +28,15 @@
     uarr.push(e.key);
     if (uarr.length > arr.length) uarr.shift();
     if (uarr.length == arr.length && uarr.every((v, i) => v === arr[i])) {
-      const cards = document.getElementsByTagName("li");
-      for (let i = 0; i < cards.length; i++) {
-        cards[i].style.animation = "bump 0.5s infinite";
-        cards[i].style.transformOrigin = "center bottom 0";
-      }
+      update_bump();
     }
   });
 </script>
+
+<div>
+  <input type="number" id="bump-bpm" value="120" onchange="update_bump()" style="display: none"/>
+</div>
+
 <style>
   @keyframes bump {
     0% {
