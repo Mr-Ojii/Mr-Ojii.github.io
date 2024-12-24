@@ -1,0 +1,44 @@
+---
+---
+<script type="text/javascript">
+  let arr = [
+    "ArrowUp",
+    "ArrowUp",
+    "ArrowDown",
+    "ArrowDown",
+    "ArrowLeft",
+    "ArrowRight",
+    "ArrowLeft",
+    "ArrowRight",
+    "b",
+    "a",
+  ];
+  let uarr = [];
+  document.addEventListener("keydown", function (e) {
+    uarr.push(e.key);
+    if (uarr.length > arr.length) uarr.shift();
+    if (uarr.length == arr.length && uarr.every((v, i) => v === arr[i])) {
+      const cards = document.getElementsByTagName("li");
+      for (let i = 0; i < cards.length; i++) {
+        cards[i].style.animation = "bump 0.5s infinite";
+      }
+    }
+  });
+</script>
+<style>
+  @keyframes bump {
+    0% {
+      transform: scale(1, 1);
+    }
+    10% {
+      transform: scale(1, 0.8);
+    }
+    60% {
+      transform: scale(1, 1.2);
+      transform: translate(0, -15px);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+</style>
