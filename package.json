@@ -12,9 +12,14 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/preact": "^4.0.4",
-    "astro": "^5.3.0",
+    "astro": "^5.3.1",
     "dayjs": "^1.11.13",
-    "preact": "^10.26.1",
+    "preact": "^10.26.2",
     "typescript": "^5.7.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "esbuild@<=0.24.2": ">=0.25.0"
+    }
   }
 }
