@@ -15,7 +15,7 @@
     "astro": "^5.3.1",
     "dayjs": "^1.11.13",
     "preact": "^10.26.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.8.2"
   },
   "pnpm": {
     "overrides": {
