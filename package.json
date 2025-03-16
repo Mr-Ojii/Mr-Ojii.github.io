@@ -16,5 +16,11 @@
     "dayjs": "^1.11.13",
     "preact": "^10.26.4",
     "typescript": "^5.8.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "prismjs@<1.30.0": ">=1.30.0",
+      "@babel/helpers@<7.26.10": ">=7.26.10"
+    }
   }
 }
