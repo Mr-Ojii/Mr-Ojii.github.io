@@ -41,10 +41,6 @@ p {
   color: rgb(var(--accent-light));
 }
 
-.text-red {
-  color: red;
-}
-
 .release-card {
   list-style: none;
   display: flex;
