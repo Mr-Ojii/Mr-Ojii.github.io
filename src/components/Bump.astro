@@ -3,26 +3,16 @@
 <script type="text/javascript" is:inline>
   function update_bump() {
     const bpm_dom = document.getElementById("bump-bpm");
-bpm_dom.style.display = "block";
+    bpm_dom.style.display = "block";
     const bpm = Number(bpm_dom.value);
     const cards = document.getElementsByTagName("li");
-    for (let i = 0; i < cards.length; i++) {
-      cards[i].style.animation = `bump ${60 / bpm}s infinite`;
-      cards[i].style.transformOrigin = "center bottom 0";
+    for (let card of cards) {
+      card.style.animation = `bump ${60 / bpm}s infinite`;
+      card.style.transformOrigin = "center bottom 0";
     }
   }
-  let arr = [
-    "ArrowUp",
-    "ArrowUp",
-    "ArrowDown",
-    "ArrowDown",
-    "ArrowLeft",
-    "ArrowRight",
-    "ArrowLeft",
-    "ArrowRight",
-    "b",
-    "a",
-  ];
+  const u = "ArrowUp", d = "ArrowDown", l = "ArrowLeft", r = "ArrowRight";
+  let arr = [u, u, d, d, l, r, l, r, "b", "a"];
   let uarr = [];
   document.addEventListener("keydown", function (e) {
     uarr.push(e.key);
