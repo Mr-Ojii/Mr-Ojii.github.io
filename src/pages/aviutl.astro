@@ -12,7 +12,28 @@ interface Category
 
 const list : Category[] = [
   {
-    name : "AviUtl プラグイン",
+    name : "AviUtl フィルタプラグイン",
+    pluginsList : [
+      {
+        name : "AviUtl-Shutdown-Plugin",
+        repoName : "AviUtl-Shutdown-Plugin",
+        search : "",
+        description : "起動から30秒後にAviUtlをシャットダウンするプラグイン・スクリプト(ネタプラグイン)",
+        nicovideoIDs : [],
+        youtubeIDs : []
+      },
+      {
+        name : "MotionTracking MK-II Plus",
+        repoName : "MotionTracking_MK-II_Plus",
+        search : "",
+        description : "MaverickTse氏のMotionTracking MK-IIに改良を加えたプラグイン",
+        nicovideoIDs : ["sm43747879"],
+        youtubeIDs : ["GY4IOFGnIgU"],
+      },
+    ],
+  },
+  {
+    name : "AviUtl 入力プラグイン",
     pluginsList : [
       {
         name : "ImageMagick File Reader",
@@ -23,14 +44,6 @@ const list : Category[] = [
         youtubeIDs : [],
       },
       {
-        name : "AviUtl-Shutdown-Plugin",
-        repoName : "AviUtl-Shutdown-Plugin",
-        search : "",
-        description : "起動から30秒後にAviUtlをシャットダウンするプラグイン・スクリプト(ネタプラグイン)",
-        nicovideoIDs : [],
-        youtubeIDs : []
-      },
-      {
         name : "L-SMASH Works (Mr-Ojii版)",
         repoName : "L-SMASH-Works-Auto-Builds",
         search : "Mr-Ojii_vimeo",
@@ -39,12 +52,12 @@ const list : Category[] = [
         youtubeIDs : [],
       },
       {
-        name : "MotionTracking MK-II Plus",
-        repoName : "MotionTracking_MK-II_Plus",
+        name : "WebP File Reader",
+        repoName : "AviUtl-WebPFileReader-Plugin",
         search : "",
-        description : "MaverickTse氏のMotionTracking MK-IIに改良を加えたプラグイン",
-        nicovideoIDs : ["sm43747879"],
-        youtubeIDs : ["GY4IOFGnIgU"],
+        description : "アニメーション WebP を読み込むための入力プラグイン",
+        nicovideoIDs : [],
+        youtubeIDs : [],
       },
     ],
   },
