@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/preact": "^4.0.11",
+    "@astrojs/preact": "^4.1.0",
     "astro": "^5.7.13",
     "dayjs": "^1.11.13",
     "preact": "^10.26.6",
