@@ -18,7 +18,7 @@ importers:
         version: 0.9.4(typescript@5.8.3)
       '@astrojs/preact':
         specifier: ^4.0.11
-        version: 4.1.0(@babel/core@7.27.1)(@types/node@24.0.8)(jiti@2.4.2)(preact@10.26.8)(yaml@2.6.1)
+        version: 4.1.0(@babel/core@7.27.1)(@types/node@24.0.8)(jiti@2.4.2)(preact@10.26.9)(yaml@2.6.1)
       astro:
         specifier: ^5.10.1
         version: 5.10.1(@types/node@24.0.8)(jiti@2.4.2)(rollup@4.44.1)(typescript@5.8.3)(yaml@2.6.1)
@@ -26,8 +26,8 @@ importers:
         specifier: ^1.11.13
         version: 1.11.13
       preact:
-        specifier: ^10.26.6
-        version: 10.26.8
+        specifier: ^10.26.9
+        version: 10.26.9
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -1469,8 +1469,8 @@ packages:
     peerDependencies:
       preact: '>=10'
 
-  preact@10.26.8:
-    resolution: {integrity: sha512-1nMfdFjucm5hKvq0IClqZwK4FJkGXhRrQstOQ3P4vp8HxKrJEMFcY6RdBRVTdfQS/UlnX6gfbPuTvaqx/bDoeQ==}
+  preact@10.26.9:
+    resolution: {integrity: sha512-SSjF9vcnF27mJK1XyFMNJzFd5u3pQiATFqoaDy03XuN00u4ziveVVEGt5RKJrDR8MHE/wJo9Nnad56RLzS2RMA==}
 
   prettier@2.8.7:
     resolution: {integrity: sha512-yPngTo3aXUUmyuTjeTUT75txrf+aMh9FiD7q9ZE/i6r0bPb22g4FsE6Y338PQX1bmfy08i9QQCB7/rcUAVntfw==}
@@ -2133,12 +2133,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/preact@4.1.0(@babel/core@7.27.1)(@types/node@24.0.8)(jiti@2.4.2)(preact@10.26.8)(yaml@2.6.1)':
+  '@astrojs/preact@4.1.0(@babel/core@7.27.1)(@types/node@24.0.8)(jiti@2.4.2)(preact@10.26.9)(yaml@2.6.1)':
     dependencies:
-      '@preact/preset-vite': 2.10.1(@babel/core@7.27.1)(preact@10.26.8)(vite@6.3.5(@types/node@24.0.8)(jiti@2.4.2)(yaml@2.6.1))
-      '@preact/signals': 2.0.4(preact@10.26.8)
-      preact: 10.26.8
-      preact-render-to-string: 6.5.13(preact@10.26.8)
+      '@preact/preset-vite': 2.10.1(@babel/core@7.27.1)(preact@10.26.9)(vite@6.3.5(@types/node@24.0.8)(jiti@2.4.2)(yaml@2.6.1))
+      '@preact/signals': 2.0.4(preact@10.26.9)
+      preact: 10.26.9
+      preact-render-to-string: 6.5.13(preact@10.26.9)
       vite: 6.3.5(@types/node@24.0.8)(jiti@2.4.2)(yaml@2.6.1)
     transitivePeerDependencies:
       - '@babel/core'
@@ -2521,12 +2521,12 @@ snapshots:
 
   '@oslojs/encoding@1.1.0': {}
 
-  '@preact/preset-vite@2.10.1(@babel/core@7.27.1)(preact@10.26.8)(vite@6.3.5(@types/node@24.0.8)(jiti@2.4.2)(yaml@2.6.1))':
+  '@preact/preset-vite@2.10.1(@babel/core@7.27.1)(preact@10.26.9)(vite@6.3.5(@types/node@24.0.8)(jiti@2.4.2)(yaml@2.6.1))':
     dependencies:
       '@babel/core': 7.27.1
       '@babel/plugin-transform-react-jsx': 7.27.1(@babel/core@7.27.1)
       '@babel/plugin-transform-react-jsx-development': 7.27.1(@babel/core@7.27.1)
-      '@prefresh/vite': 2.4.7(preact@10.26.8)(vite@6.3.5(@types/node@24.0.8)(jiti@2.4.2)(yaml@2.6.1))
+      '@prefresh/vite': 2.4.7(preact@10.26.9)(vite@6.3.5(@types/node@24.0.8)(jiti@2.4.2)(yaml@2.6.1))
       '@rollup/pluginutils': 4.2.1
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.27.1)
       debug: 4.4.1
@@ -2539,27 +2539,27 @@ snapshots:
 
   '@preact/signals-core@1.8.0': {}
 
-  '@preact/signals@2.0.4(preact@10.26.8)':
+  '@preact/signals@2.0.4(preact@10.26.9)':
     dependencies:
       '@preact/signals-core': 1.8.0
-      preact: 10.26.8
+      preact: 10.26.9
 
   '@prefresh/babel-plugin@0.5.1': {}
 
-  '@prefresh/core@1.5.3(preact@10.26.8)':
+  '@prefresh/core@1.5.3(preact@10.26.9)':
     dependencies:
-      preact: 10.26.8
+      preact: 10.26.9
 
   '@prefresh/utils@1.2.0': {}
 
-  '@prefresh/vite@2.4.7(preact@10.26.8)(vite@6.3.5(@types/node@24.0.8)(jiti@2.4.2)(yaml@2.6.1))':
+  '@prefresh/vite@2.4.7(preact@10.26.9)(vite@6.3.5(@types/node@24.0.8)(jiti@2.4.2)(yaml@2.6.1))':
     dependencies:
       '@babel/core': 7.27.1
       '@prefresh/babel-plugin': 0.5.1
-      '@prefresh/core': 1.5.3(preact@10.26.8)
+      '@prefresh/core': 1.5.3(preact@10.26.9)
       '@prefresh/utils': 1.2.0
       '@rollup/pluginutils': 4.2.1
-      preact: 10.26.8
+      preact: 10.26.9
       vite: 6.3.5(@types/node@24.0.8)(jiti@2.4.2)(yaml@2.6.1)
     transitivePeerDependencies:
       - supports-color
@@ -3789,11 +3789,11 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  preact-render-to-string@6.5.13(preact@10.26.8):
+  preact-render-to-string@6.5.13(preact@10.26.9):
     dependencies:
-      preact: 10.26.8
+      preact: 10.26.9
 
-  preact@10.26.8: {}
+  preact@10.26.9: {}
 
   prettier@2.8.7:
     optional: true
