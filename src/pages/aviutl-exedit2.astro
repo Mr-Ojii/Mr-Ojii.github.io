@@ -1,0 +1,158 @@
+---
+import { type RepoData } from '../interfaces/RepoData';
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.tsx';
+import Bump from '../components/Bump.astro';
+
+interface Category
+{
+  name : string;
+  pluginsList : RepoData[];
+}
+
+const list : Category[] = [
+  {
+    name : "入力プラグイン",
+    pluginsList : [
+      {
+        name : "L-SMASH Works (Mr-Ojii版)",
+        repoName : "L-SMASH-Works-Auto-Builds",
+        search : "Mr-Ojii_vimeo",
+        description : "お馴染みの入力プラグイン",
+        nicovideoIDs : [],
+        youtubeIDs : [],
+      },
+    ],
+  },
+]
+
+const titlestr="Mr-OjiiのAviUtl ExEdit2関連ソフトウェア";
+
+---
+
+<Layout title={titlestr}>
+  <main>
+    <h1>{titlestr}</h1>
+    <h2>目次</h2>
+    <div class="index">
+      {
+        list.map((categoryitem) => (
+          <h3>{categoryitem.name}</h3>
+          <ul>
+            {
+              categoryitem.pluginsList.map((item) => {
+                const itemhref = "#" + item.name;
+                return (
+                  <a href={itemhref}><li>{item.name}</li></a>
+                )
+              })
+            }
+          </ul>
+        ))
+      }
+    </div>
+
+    <h2>内容</h2>
+    {
+      list.map((categoryitem) => (
+        <h3>{categoryitem.name}</h3>
+        <ul role="list" class="link-card-grid">
+          {
+            categoryitem.pluginsList.map((item) => (
+              <Card
+                name={item.name}
+                repoName={item.repoName}
+                description={item.description}
+                search={item.search}
+                nicovideoIDs={item.nicovideoIDs}
+                youtubeIDs={item.youtubeIDs}
+                client:load
+              />
+            ))
+          }
+        </ul>
+      ))
+    }
+  </main>
+  <Bump />
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+  }
+
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+  h1 {
+    color: lightgray;
+  }
+  h2 {
+    color: #666eff;
+  }
+  h3 {
+    color: #5258cc;
+  }
+  .link-card-grid {
+    display: grid;
+    gap: 2rem;
+    padding: 0;
+  }
+  .index {
+    border: solid 2px #323742;
+    border-radius: 7px;
+    padding: 1em;
+    background-color: #23262d;
+  }
+  .index h3 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
+  .index ul {
+    margin: 0;
+  }
+  .index a {
+    color: lightgray;
+  }
+  .index a:is(:hover) {
+      color: rgb(var(--release-accent-light));
+  }
+</style>
