@@ -12,7 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/preact": "^4.1.0",
-    "astro": "^5.11.0",
+    "astro": "^5.12.0",
     "dayjs": "^1.11.13",
     "preact": "^10.26.9",
     "typescript": "^5.8.3"
