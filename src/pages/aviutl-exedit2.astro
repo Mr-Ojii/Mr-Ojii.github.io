@@ -3,6 +3,7 @@ import { type RepoData } from '../interfaces/RepoData';
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.tsx';
 import Bump from '../components/Bump.astro';
+import { LSW_recommend_data } from '../components/Recommend.ts';
 
 interface Category
 {
@@ -17,7 +18,7 @@ const list : Category[] = [
       {
         name : "L-SMASH Works (Mr-Ojii版)",
         repoName : "L-SMASH-Works-Auto-Builds",
-        search : "Mr-Ojii_vimeo",
+        search : LSW_recommend_data,
         description : "無印AviUtlでは、お馴染みの入力プラグイン",
         nicovideoIDs : [],
         youtubeIDs : [],
