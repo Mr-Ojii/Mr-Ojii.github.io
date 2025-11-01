@@ -13,7 +13,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/preact": "^4.1.1",
     "astro": "^5.14.3",
-    "dayjs": "^1.11.18",
+    "dayjs": "^1.11.19",
     "preact": "^10.27.2",
     "typescript": "^5.9.3"
   },
