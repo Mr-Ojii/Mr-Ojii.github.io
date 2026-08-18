@@ -14,7 +14,7 @@
     "@astrojs/preact": "^6.0.2",
     "astro": "^7.1.5",
     "dayjs": "^1.11.21",
-    "preact": "^10.29.7",
+    "preact": "^10.29.8",
     "typescript": "^6.0.3"
   }
 }
