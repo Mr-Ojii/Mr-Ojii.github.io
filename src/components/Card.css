@@ -43,7 +43,7 @@ p {
   list-style: none;
   display: flex;
   margin-top: 20px;
-  padding: 3px;
+  padding: 2px;
   background-color: var(--card-hover-bg);
   background-image: none;
   background-size: 400%;
