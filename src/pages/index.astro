@@ -2,6 +2,39 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Bump from "../components/Bump.astro";
+const list = [
+  {
+    href: "/aviutl",
+    title: "AviUtl",
+    desc: "AviUtl関連のまとめ",
+  },
+  {
+    href: "/aviutl-exedit2",
+    title: "AviUtl ExEdit2",
+    desc: "AviUtl ExEdit2関連のまとめ",
+  },
+  {
+    href: "/apps",
+    title: "Applications",
+    desc: "その他アプリのまとめ",
+  },
+  {
+    href: "https://scrapbox.io/Mr-Ojii",
+    title: "Scrapbox",
+    desc: "雑多に記事書いてます",
+  },
+  {
+    href: "https://www.nicovideo.jp/user/118196710",
+    title: "ニコニコ",
+    desc: "動画あげてます",
+  },
+  {
+    href: "https://www.youtube.com/@Mr-Ojii",
+    title: "YouTube",
+    desc: "ニコニコとほぼ同じ",
+  },
+]
+
 ---
 
 <Layout title="Mr-Ojii">
@@ -9,36 +42,15 @@ import Bump from "../components/Bump.astro";
     <h1>Welcome to <span class="text-gradient">Mr-Ojii's Page</span></h1>
     <p class="instructions">広く浅くいろいろやってます</p>
     <ul role="list" class="link-card-grid">
-      <Card
-        href="https://scrapbox.io/Mr-Ojii"
-        title="Scrapbox"
-        body="雑多に記事書いてます"
-      />
-      <Card
-        href="/aviutl"
-        title="AviUtl"
-        body="AviUtl関連のまとめ"
-      />
-      <Card
-        href="/aviutl-exedit2"
-        title="AviUtl ExEdit2"
-        body="AviUtl ExEdit2関連のまとめ"
-      />
-      <Card
-        href="/apps"
-        title="Applications"
-        body="その他アプリのまとめ"
-      />
-      <Card
-        href="https://www.nicovideo.jp/user/118196710"
-        title="ニコニコ"
-        body="動画あげてます"
-      />
-      <Card
-        href="https://www.youtube.com/@Mr-Ojii"
-        title="YouTube"
-        body="ニコニコとほぼ同じ"
-      />
+      {
+        list.map(d =>
+          <Card
+            href={d.href}
+            title={d.title}
+            body={d.desc}
+          />
+        )
+      }
     </ul>
   </main>
   <Bump />
