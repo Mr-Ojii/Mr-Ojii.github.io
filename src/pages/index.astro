@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import StaticCard from "../components/StaticCard.astro";
 import Bump from "../components/Bump.astro";
 const list = [
   {
@@ -44,7 +44,7 @@ const list = [
     <ul role="list" class="link-card-grid">
       {
         list.map(d =>
-          <Card
+          <StaticCard
             href={d.href}
             title={d.title}
             body={d.desc}

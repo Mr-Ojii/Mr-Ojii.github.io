@@ -1,7 +1,7 @@
 ---
 import { type RepoData } from '../interfaces/RepoData';
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import StaticCard from '../components/StaticCard.astro';
 import Bump from '../components/Bump.astro';
 
 interface Category
@@ -144,7 +144,7 @@ const titlestr="Mr-Ojiiのアプリ";
         <ul role="list" class="link-card-grid">
           {
             categoryitem.repoList.map((item) => (
-              <Card
+              <StaticCard
                 href={"https://github.com/Mr-Ojii/"+ item.repoName}
                 title={item.name}
                 body={item.description}
