@@ -1,0 +1,65 @@
+---
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/aviutl", label: "AviUtl" },
+  { href: "/aviutl-exedit2", label: "AviUtl ExEdit2" },
+  { href: "/apps", label: "Applications" },
+];
+---
+
+<header>
+  <nav>
+    <a class="site-title" href="/">Mr-Ojii's Page</a>
+    <ul role="list">
+      {
+        navItems.map((item) => (
+          <li>
+            <a href={item.href}>{item.label}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(19, 21, 26, 0.8);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  nav {
+    margin: auto;
+    padding: 0 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .site-title {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .site-title:hover {
+    color: rgb(var(--accent-light));
+  }
+  ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+  }
+  li a {
+    color: lightgray;
+    text-decoration: none;
+  }
+  li a:hover {
+    color: rgb(var(--accent-light));
+  }
+</style>
