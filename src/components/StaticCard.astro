@@ -6,13 +6,14 @@ interface Props {
 }
 
 const { href, title, body } = Astro.props;
+const isExternal = href.startsWith("http");
 ---
 
 <li class="link-card">
   <a id={title} href={href}>
     <h2>
       {title}
-      <span>&rarr;</span>
+      <span class:list={[isExternal && "external"]}>&rarr;</span>
     </h2>
     <p>
       {body}
@@ -57,5 +58,9 @@ const { href, title, body } = Astro.props;
   }
   .link-card:is(:hover, :focus-within) h2 {
     color: rgb(var(--accent-light));
+  }
+  .external {
+    display: inline-block;
+    transform: rotate(-45deg);
   }
 </style>
