@@ -65,11 +65,26 @@ const schema = JSON.stringify({
 </html>
 <style is:global>
   :root {
+    /* アクセント (RGB) */
     --accent: 136, 58, 234;
     --release-accent: 250, 50, 63;
     --accent-light: 224, 204, 250;
     --release-accent-light: 250, 100, 110;
     --accent-dark: 49, 10, 101;
+
+    /* ベースカラー (RGB) */
+    --bg: 19, 21, 26; /* ページ背景 */
+    --surface: #23262d; /* カード背景 */
+    --surface-border: #323742; /* 目次ボックス枠 */
+    --card-hover-bg: #777777; /* releaseカードの外枠 */
+    --card-border: rgba(255, 255, 255, 0.1); /* カード枠線 */
+
+    /* テキスト */
+    --text: white;
+    --text-muted: lightgray; /* 補助テキスト・リンク */
+    --text-heading: #666eff; /* h2 */
+    --text-heading2: #5258cc; /* h3 */
+
     --accent-gradient: linear-gradient(
       45deg,
       rgb(var(--accent)),
@@ -85,7 +100,7 @@ const schema = JSON.stringify({
   }
   html {
     font-family: system-ui, sans-serif;
-    background: #13151a;
+    background: rgb(var(--bg));
     background-size: 224px;
   }
   code {

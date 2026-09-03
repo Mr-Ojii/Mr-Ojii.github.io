@@ -232,7 +232,7 @@ const titlestr="Mr-OjiiのAviUtl関連ソフトウェア";
     padding: 1rem;
     width: 800px;
     max-width: calc(100% - 2rem);
-    color: white;
+    color: var(--text);
     font-size: 20px;
     line-height: 1.6;
   }
@@ -272,13 +272,13 @@ const titlestr="Mr-OjiiのAviUtl関連ソフトウェア";
     color: rgb(var(--accent-light));
   }
   h1 {
-    color: lightgray;
+    color: var(--text-muted);
   }
   h2 {
-    color: #666eff;
+    color: var(--text-heading);
   }
   h3 {
-    color: #5258cc;
+    color: var(--text-heading2);
   }
   .link-card-grid {
     display: grid;
@@ -286,10 +286,10 @@ const titlestr="Mr-OjiiのAviUtl関連ソフトウェア";
     padding: 0;
   }
   .index {
-    border: solid 2px #323742;
+    border: solid 2px var(--surface-border);
     border-radius: 7px;
     padding: 1em;
-    background-color: #23262d;
+    background-color: var(--surface);
   }
   .index h3 {
     margin-block-start: 0em;
@@ -299,7 +299,7 @@ const titlestr="Mr-OjiiのAviUtl関連ソフトウェア";
     margin: 0;
   }
   .index a {
-    color: lightgray;
+    color: var(--text-muted);
   }
   .index a:is(:hover) {
       color: rgb(var(--release-accent-light));

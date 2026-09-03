@@ -27,9 +27,9 @@ const navItems = [
     position: sticky;
     top: 0;
     z-index: 10;
-    background-color: rgba(19, 21, 26, 0.8);
+    background-color: rgba(var(--bg), 0.8);
     backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--card-border);
   }
   nav {
     margin: auto;
@@ -42,7 +42,7 @@ const navItems = [
     gap: 1rem;
   }
   .site-title {
-    color: white;
+    color: var(--text);
     text-decoration: none;
     font-weight: 700;
   }
@@ -56,7 +56,7 @@ const navItems = [
     padding: 0;
   }
   li a {
-    color: lightgray;
+    color: var(--text-muted);
     text-decoration: none;
   }
   li a:hover {

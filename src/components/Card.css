@@ -2,13 +2,13 @@
   list-style: none;
   display: flex;
   padding: 1px;
-  background-color: #23262d;
+  background-color: var(--surface);
   background-image: none;
   background-size: 400%;
   border-radius: 7px;
   background-position: 100%;
   transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 0 1px var(--card-border);
 }
 
 .link-card>a {
@@ -17,8 +17,8 @@
   line-height: 1.4;
   padding: calc(1.5rem - 1px);
   border-radius: 8px;
-  color: white;
-  background-color: #23262d;
+  color: var(--text);
+  background-color: var(--surface);
   opacity: 0.8;
 }
 
@@ -46,13 +46,13 @@ p {
   display: flex;
   margin-top: 20px;
   padding: 3px;
-  background-color: #777777;
+  background-color: var(--card-hover-bg);
   background-image: none;
   background-size: 400%;
   border-radius: 10px;
   background-position: 100%;
   transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 0 1px var(--card-border);
 }
 
 .release-card>a {
@@ -61,8 +61,8 @@ p {
   line-height: 1.4;
   padding: calc(1.5rem - 1px);
   border-radius: 8px;
-  color: white;
-  background-color: #23262d;
+  color: var(--text);
+  background-color: var(--surface);
   opacity: 0.8;
 }
 
@@ -76,7 +76,7 @@ p {
 }
 
 p>a {
-  color: lightgray;
+  color: var(--text-muted);
 }
 
 p>a:is(:hover) {
